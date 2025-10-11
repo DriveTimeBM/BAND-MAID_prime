@@ -40,7 +40,7 @@
   
     // Create the overlay
     const renderSummary = (data, setlists) => {
-      // Prevent duplicate overlays
+      // ✅ Prevent duplicates
       if (document.querySelector('#bandmaid-summary-box')) return;
 
       const container = document.createElement('div');
