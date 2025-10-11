@@ -19,7 +19,7 @@
         "title": "BAND-MAID U.S. TOUR 2022 BEHIND-THE SCENES part 2 of 4",
         "tour": "BAND-MAID US TOUR 2022",
         "venue": "PHX,DAL,HOU",
-        "date": "2022-10-19 thru 17",
+        "date": "2022-10-19 thru 24",
         "notes": "",
         "setlist": [
           { "time": "00:00", "song": "Crescent Ballroom (PHX)" },
@@ -29,6 +29,35 @@
         ],
         "previous": "111974",
         "next": "111977"
+      },
+      "111977": {
+        "title": "BAND-MAID U.S. TOUR 2022 BEHIND-THE SCENES part 3 of 4",
+        "tour": "BAND-MAID US TOUR 2022",
+        "venue": "DC,PHI,NYC",
+        "date": "2022-10-25 thru 28",
+        "notes": "",
+        "setlist": [
+          { "time": "00:00", "song": "Fillmore (DC)" },
+          { "time": "03:33", "song": "ToLA (PHI)" },
+          { "time": "09:44", "song": "Day off (NYC)" },
+          { "time": "12:26", "song": "Irving Plaza (NYC)" }
+        ],
+        "previous": "111976",
+        "next": "111979"
+      },
+      "111979": {
+        "title": "BAND-MAID U.S. TOUR 2022 BEHIND-THE SCENES part 4 of 4",
+        "tour": "BAND-MAID US TOUR 2022",
+        "venue": "BOS,NJ,CHI",
+        "date": "2022-10-29 thru 11-01",
+        "notes": "",
+        "setlist": [
+          { "time": "00:00", "song": "Paradise Rock Club (BOS)" },
+          { "time": "05:18", "song": "American Dream (NJ)" },
+          { "time": "11:54", "song": "HoB (CHI)" },
+          { "time": "19:54", "song": "Wrap up" }
+        ],
+        "previous": "111977"
       },
       "81253": {
         "title": "[OKYUJI] BAND-MAID ONLINE ACOUSTIC (Dec 25, 2021) part 1 of 4",
