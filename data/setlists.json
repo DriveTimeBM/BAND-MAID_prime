@@ -1,21 +1,63 @@
 {
-    "59927": {
+    "59476": {
       "title": "[OKYUJI] BAND-MAID WORLD DOMINATION TOUR 2018【宣告】 Part 2",
       "tour": "WORLD DOMINATION TOUR 2018【宣告】",
       "venue": "Zepp TOKYO",
       "date": "2018-04-13",
-      "notes": "Part 2 of 3",
+      "notes": "Part 1 of 3",
       "setlist": [
-        { "time": "00:00", "song": "Daydreaming" },
-        { "time": "05:02", "song": "One and Only" },
-        { "time": "08:45", "song": "music box intro (anemone)" },
-        { "time": "10:12", "song": "Puzzle (acoustic)" },
-        { "time": "17:14", "song": "anemone (acoustic)" },
-        { "time": "23:06", "song": "DICE" },
-        { "time": "27:08", "song": "secret MY lips" },
-        { "time": "31:18", "song": "Clang" },
-        { "time": "35:31", "song": "FATE" }
-      ]
-    }
+        { "time": "00:00", "song": "SE" },
+        { "time": "02:05", "song": "DOMINATION" },
+        { "time": "05:53", "song": "Play" },
+        { "time": "09:12", "song": "Spirit!!" },
+        { "time": "12:55", "song": "the non-fiction days" },
+        { "time": "17:40", "song": "Moratorium [モラトリアム]" },
+        { "time": "22:16", "song": "MC" },
+        { "time": "23:27", "song": "Alive-or-Dead" },
+        { "time": "27:11", "song": "Cross" },
+        { "time": "30:55", "song": "Turn me on" },
+        { "time": "35:35", "song": "Don't you tell ME" }
+      ],
+      "next": "59927"
+    },
+    "59927": {
+        "title": "[OKYUJI] BAND-MAID WORLD DOMINATION TOUR 2018【宣告】 Part 2",
+        "tour": "WORLD DOMINATION TOUR 2018【宣告】",
+        "venue": "Zepp TOKYO",
+        "date": "2018-04-13",
+        "notes": "Part 2 of 3",
+        "setlist": [
+          { "time": "00:00", "song": "Daydreaming" },
+          { "time": "05:02", "song": "One and Only" },
+          { "time": "08:45", "song": "music box intro (anemone)" },
+          { "time": "10:12", "song": "Puzzle (acoustic)" },
+          { "time": "17:14", "song": "anemone (acoustic)" },
+          { "time": "23:06", "song": "DICE" },
+          { "time": "27:08", "song": "secret MY lips" },
+          { "time": "31:18", "song": "Clang" },
+          { "time": "35:31", "song": "FATE" }
+        ],
+        "previous": "59476",
+        "next": "61126"
+      },
+      "61126": {
+        "title": "[OKYUJI] BAND-MAID WORLD DOMINATION TOUR 2018【宣告】 Part 2",
+        "tour": "WORLD DOMINATION TOUR 2018【宣告】",
+        "venue": "Zepp TOKYO",
+        "date": "2018-04-13",
+        "notes": "Part 3 of 3",
+        "setlist": [
+          { "time": "00:00", "song": "onset" },
+          { "time": "03:58", "song": "Carry on living" },
+          { "time": "07:25", "song": "Alone" },
+          { "time": "11:09", "song": "Omajinai Time" },
+          { "time": "24:02", "song": "I can't live without you" },
+          { "time": "27:49", "song": "you." },
+          { "time": "31:42", "song": "Freedom" },
+          { "time": "36:02", "song": "REAL EXISTENCE" },
+          { "time": "40:10", "song": "Choose me" }
+        ],
+        "previous": "59927"
+      }  
   }
   

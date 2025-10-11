@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         BAND-MAID Prime Video Describer (with Timestamps)
+// @name         BAND-MAID Prime Video Describer (with Timestamps & Navigation)
 // @namespace    https://bandmaidprime.tokyo/
-// @version      1.3
-// @description  Display BAND-MAID Prime Okyuji info with timestamped setlist from external JSON
+// @version      1.4
+// @description  Show Okyuji info with timestamps and next/previous part links from external JSON
 // @author       DriveTimeBM
 // @match        https://bandmaidprime.tokyo/movies/*
 // @grant        GM_xmlhttpRequest
@@ -15,7 +15,7 @@
     const GITHUB_JSON_URL =
       'https://raw.githubusercontent.com/DriveTimeBM/BAND-MAID_prime/main/data/setlists.json';
   
-    // Helper: Extract numeric video ID from URL
+    // Extract numeric video ID from URL
     const getVideoId = () => {
       const match = window.location.pathname.match(/movies\/(\d+)/);
       return match ? match[1] : null;
@@ -38,7 +38,8 @@
         });
       });
   
-    const renderSummary = (data) => {
+    // Create the overlay
+    const renderSummary = (data, setlists) => {
       const container = document.createElement('div');
       container.style.marginTop = '20px';
       container.style.padding = '12px 16px';
@@ -48,7 +49,7 @@
       container.style.fontFamily = 'monospace';
       container.style.lineHeight = '1.5';
   
-      let html = '';
+      let html = '<div style="height:120px;"></div>'; // spacer to push lower
   
       if (data) {
         html += `<br><br><br><br>`
@@ -60,8 +61,7 @@
         if (data.notes) html += `<strong>Notes:</strong> ${data.notes}<br><br>`;
   
         if (data.setlist && data.setlist.length) {
-          html += `<strong>Setlist:</strong><br>`;
-          html += `<ol style="margin-top:4px;">`;
+          html += `<strong>Setlist:</strong><br><ol style="margin-top:4px;">`;
           for (const entry of data.setlist) {
             if (entry.time) {
               const [min, sec] = entry.time.split(':').map(Number);
@@ -71,7 +71,21 @@
               html += `<li>${entry.song}</li>`;
             }
           }
-          html += `</ol>`;
+          html += `</ol><br>`;
+        }
+  
+        // Navigation buttons
+        if (data.previous || data.next) {
+          html += `<div style="margin-top:16px;">`;
+          if (data.previous) {
+            const prev = setlists[data.previous];
+            html += `<a href="https://bandmaidprime.tokyo/movies/${data.previous}" style="margin-right:12px; color:#333; text-decoration:none; background:#f9d5e2; padding:6px 10px; border-radius:8px;">⬅️ Prev: ${prev ? prev.title.replace(/\[OKYUJI\]\s*/,'') : 'Part -'}</a>`;
+          }
+          if (data.next) {
+            const next = setlists[data.next];
+            html += `<a href="https://bandmaidprime.tokyo/movies/${data.next}" style="color:#333; text-decoration:none; background:#f9d5e2; padding:6px 10px; border-radius:8px;">Next: ${next ? next.title.replace(/\[OKYUJI\]\s*/,'') : 'Part +' } ➡️</a>`;
+          }
+          html += `</div>`;
         }
       } else {
         html += '📺 This appears to be a non-Okyuji (interview or behind-the-scenes) video.';
@@ -82,9 +96,8 @@
   
       const titleElement = document.querySelector('h1, .movie-title');
       if (titleElement) titleElement.insertAdjacentElement('afterend', div);
-        
-
-      // Jump to time in video if user clicks timestamp
+  
+      // Timestamp jump
       div.addEventListener('click', e => {
         if (e.target.tagName === 'A' && e.target.href.includes('#t=')) {
           e.preventDefault();
@@ -94,7 +107,6 @@
             video.currentTime = seconds;
             video.play();
           } else {
-            // fallback: scroll to video section
             window.location.hash = `t=${seconds}`;
           }
         }
@@ -108,7 +120,7 @@
   
       try {
         const setlists = await loadSetlists();
-        renderSummary(setlists[videoId]);
+        renderSummary(setlists[videoId], setlists);
       } catch (err) {
         console.error('Failed to load BAND-MAID setlists:', err);
       }
