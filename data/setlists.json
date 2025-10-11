@@ -1,25 +1,41 @@
 {
-    "59476": {
-      "title": "[OKYUJI] BAND-MAID WORLD DOMINATION TOUR 2018【宣告】 Part 1",
-      "tour": "WORLD DOMINATION TOUR 2018【宣告】",
-      "venue": "Zepp TOKYO",
-      "date": "2018-04-13",
-      "notes": "Part 1 of 3",
-      "setlist": [
-        { "time": "00:00", "song": "SE" },
-        { "time": "02:05", "song": "DOMINATION" },
-        { "time": "05:53", "song": "Play" },
-        { "time": "09:12", "song": "Spirit!!" },
-        { "time": "12:55", "song": "the non-fiction days" },
-        { "time": "17:40", "song": "Moratorium [モラトリアム]" },
-        { "time": "22:16", "song": "MC" },
-        { "time": "23:27", "song": "Alive-or-Dead" },
-        { "time": "27:11", "song": "Cross" },
-        { "time": "30:55", "song": "Turn me on" },
-        { "time": "35:35", "song": "Don't you tell ME" }
-      ],
-      "next": "59927"
-    },
+    "58102": {
+        "title": "[OKYUJI] BAND-MAID 1st Full Album『Just Bring It』Pre-Release One-man 〜新年 初お給仕はじめます〜",
+        "tour": "『Just Bring It』Pre-Release One-man",
+        "venue": "Akasaka BLITZ",
+        "date": "2017-01-09",
+        "notes": "Part 1 of 1",
+        "setlist": [
+          { "time": "00:00", "song": "REAL EXISTENCE" },
+          { "time": "04:18", "song": "Before Yesterday" },
+          { "time": "07:57", "song": "the non-fiction days" },
+          { "time": "12:47", "song": "Take Me Higher" },
+          { "time": "16:29", "song": "Don't you tell ME" },
+          { "time": "20:15", "song": "Alone" },
+          { "time": "23:50", "song": "YOLO" }
+        ]
+      },    
+      "59476": {
+        "title": "[OKYUJI] BAND-MAID WORLD DOMINATION TOUR 2018【宣告】 Part 1",
+        "tour": "WORLD DOMINATION TOUR 2018【宣告】",
+        "venue": "Zepp TOKYO",
+        "date": "2018-04-13",
+        "notes": "Part 1 of 3",
+        "setlist": [
+          { "time": "00:00", "song": "SE" },
+          { "time": "02:05", "song": "DOMINATION" },
+          { "time": "05:53", "song": "Play" },
+          { "time": "09:12", "song": "Spirit!!" },
+          { "time": "12:55", "song": "the non-fiction days" },
+          { "time": "17:40", "song": "Moratorium [モラトリアム]" },
+          { "time": "22:16", "song": "MC" },
+          { "time": "23:27", "song": "Alive-or-Dead" },
+          { "time": "27:11", "song": "Cross" },
+          { "time": "30:55", "song": "Turn me on" },
+          { "time": "35:35", "song": "Don't you tell ME" }
+        ],
+        "next": "59927"
+      },
     "59927": {
         "title": "[OKYUJI] BAND-MAID WORLD DOMINATION TOUR 2018【宣告】 Part 2",
         "tour": "WORLD DOMINATION TOUR 2018【宣告】",
