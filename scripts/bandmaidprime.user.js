@@ -80,8 +80,16 @@
       div.innerHTML = html;
   
       const titleElement = document.querySelector('h1, .movie-title');
-      if (titleElement) titleElement.insertAdjacentElement('afterend', div);
+      //if (titleElement) titleElement.insertAdjacentElement('afterend', div);
   
+      const videoElement = document.querySelector('video, .movie-video');
+      if (videoElement) {
+        videoElement.insertAdjacentElement('afterend', div);
+      } else if (titleElement) {
+        titleElement.insertAdjacentElement('afterend', div);
+      }
+      
+
       // Jump to time in video if user clicks timestamp
       div.addEventListener('click', e => {
         if (e.target.tagName === 'A' && e.target.href.includes('#t=')) {
