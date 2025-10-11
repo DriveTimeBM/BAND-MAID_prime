@@ -9,7 +9,22 @@
           { "time": "00:00", "song": "OMAJINAI TIME" }
         ]
       },   
-    "58102": {
+      "111566": {
+        "title": "[OKYUJI] BAND-MAID *THE DAY OF MAID* (May 10, 2021)  from  *Sense* first press limited edition",
+        "tour": "livestream",
+        "venue": "harevutai",
+        "date": "2021-05-10",
+        "notes": "Part 1 of 1",
+        "setlist": [
+          { "time": "00:00", "song": "I still seek revenge." },
+          { "time": "03:20", "song": "Youth" },
+          { "time": "07:00", "song": "Why Why Why" },
+          { "time": "10:35", "song": "H-G-K" },
+          { "time": "14:00", "song": "CHEMICAL REACTION" },
+          { "time": "18:20", "song": "Honkai [本懐]" }
+        ]
+      },      
+      "58102": {
         "title": "[OKYUJI] BAND-MAID 1st Full Album『Just Bring It』Pre-Release One-man 〜新年 初お給仕はじめます〜",
         "tour": "『Just Bring It』Pre-Release One-man",
         "venue": "Akasaka BLITZ",
