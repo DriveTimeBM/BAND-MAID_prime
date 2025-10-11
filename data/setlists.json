@@ -1,5 +1,21 @@
 {
-    "90808": {
+    "70262": {
+        "title": "[OKYUJI] BAND-MAID ONLINE OKYU-JI (Dec. 13, 2020) part 1",
+        "tour": "livestream",
+        "venue": "harevutai",
+        "date": "2020-12-13",
+        "notes": "Part 1 of 4",
+        "setlist": [
+          { "time": "00:00", "song": "SE" },
+          { "time": "02:04", "song": "Dilemma" },
+          { "time": "05:39", "song": "DICE" },
+          { "time": "09:45", "song": "Don't you tell ME" },
+          { "time": "13:02", "song": "Blooming" },
+          { "time": "17:48", "song": "glory" }
+        ],
+        "next": "70563"
+      },
+      "90808": {
         "title": "AKANE's OMAJINAI TIME",
         "tour": "BAND-MAID 10TH ANNIVERSARY TOUR",
         "venue": "Kawasaki  CLUB CITTA",
