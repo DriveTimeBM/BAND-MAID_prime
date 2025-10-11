@@ -1,5 +1,42 @@
 {
-    "70262": {
+    "58426": {
+        "title": "BAND-MAID OKYUJI TOUR Autumn-Winter 2017「Moeruno? Moenaino? Docchinano!?」』Tour Final @Tokyo・SHINKIBA STUDIO COAST Part 1",
+        "tour": "Okyuji TOUR Autumn-Winter 2017 [Moeruno? Moenaino? Docchinano!?]",
+        "venue": "SHINKIBA STUDIO COAST",
+        "date": "2017-11-24",
+        "notes": "Part 1 of 2",
+        "setlist": [
+          { "time": "00:00", "song": "SE" },
+          { "time": "01:22", "song": "Choose me" },
+          { "time": "05:02", "song": "Don't you tell ME" },
+          { "time": "08:10", "song": "Moratorium [モラトリアム]" },
+          { "time": "12:28", "song": "Puzzle" },
+          { "time": "16:48", "song": "Cross" },
+          { "time": "20:32", "song": "Matchless Gum" },
+          { "time": "23:40", "song": "Awkward" },
+          { "time": "27:56", "song": "Daydreaming" }
+        ],
+        "next": "58839"
+      },
+      "58839": {
+        "title": "BAND-MAID OKYUJI TOUR Autumn-Winter 2017「Moeruno? Moenaino? Docchinano!?」』Tour Final @Tokyo・SHINKIBA STUDIO COAST Part 2",
+        "tour": "Okyuji TOUR Autumn-Winter 2017 [Moeruno? Moenaino? Docchinano!?]",
+        "venue": "SHINKIBA STUDIO COAST",
+        "date": "2017-11-24",
+        "notes": "Part 2 of 2",
+        "setlist": [
+          { "time": "00:00", "song": "YOLO" },
+          { "time": "04:15", "song": "Alone" },
+          { "time": "07:45", "song": "REAL EXISTENCE" },
+          { "time": "12:12", "song": "Take me higher (ext. bridge)" },
+          { "time": "15:46", "song": "Play (ext. intro)" },
+          { "time": "19:39", "song": "secret MY lips" },
+          { "time": "20:32", "song": "Matchless Gum" },
+          { "time": "23:47", "song": "the non-fiction days" }
+        ],
+        "previous": "58426"
+      },
+      "70262": {
         "title": "[OKYUJI] BAND-MAID ONLINE OKYU-JI (Dec. 13, 2020) part 1",
         "tour": "livestream",
         "venue": "harevutai",
