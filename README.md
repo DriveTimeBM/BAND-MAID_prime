@@ -27,7 +27,7 @@ The overlay updates dynamically when switching between videos — no page reload
    - Also supported on Safari and Opera.
 
 2. **Install the Script**
-   - Visit the raw URL of the script file in this repository:  
+   - Visit the [raw URL of the script](https://drivetimebm.github.io/BAND-MAID_prime/scripts/bandmaidprime.user.js) file in this repository:  
 
      ```HTML
      https://drivetimebm.github.io/BAND-MAID_prime/scripts/bandmaidprime.user.js
@@ -52,7 +52,7 @@ The overlay automatically updates when navigating between video parts.
 
 ## 🗂️ Data Source
 
-Setlist and metadata are stored in: [bandmaidprime.user.js](https://drivetimebm.github.io/BAND-MAID_prime/scripts/bandmaidprime.user.js)
+Setlist and metadata are stored in: [data/setlists.json](https://drivetimebm.github.io/BAND-MAID_prime/data/setlists.json)
 
 Each entry includes:
 
