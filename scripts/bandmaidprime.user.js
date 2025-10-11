@@ -90,7 +90,7 @@
             const next = setlists[data.next];
             html += `<a href="https://bandmaidprime.tokyo/movies/${data.next}" style="color:#333; text-decoration:none; background:#f9d5e2; padding:6px 10px; border-radius:8px;">Next: ${next ? next.title.replace(/\[OKYUJI\]\s*/,'') : 'Part +' } ➡️</a>`;
           }
-          html += `</div>`;
+          html += `<br><br><br><br><br><br></div>`;
         }
       } else {
         html += '📺 This appears to be a non-Okyuji (interview or behind-the-scenes) video.';
