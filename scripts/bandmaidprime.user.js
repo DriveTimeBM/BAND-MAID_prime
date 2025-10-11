@@ -51,12 +51,7 @@
       let html = '';
   
       if (data) {
-        html += `-`
-        html += `-`
-        html += `-`
-        html += `-`
-        html += `-`
-        html += `-`
+        html += `<br><br><br><br><br><br>`
         html += `<strong>🎸 Okyuji (Live Performance)</strong><br><br>`;
         html += `<strong>Title:</strong> ${data.title}<br>`;
         if (data.tour) html += `<strong>Tour:</strong> ${data.tour}<br>`;
