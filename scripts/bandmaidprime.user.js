@@ -40,7 +40,7 @@
   
     const renderSummary = (data) => {
       const container = document.createElement('div');
-      container.style.marginTop = '20px';
+      container.style.marginTop = '120px';
       container.style.padding = '12px 16px';
       container.style.border = '2px solid #f2a2c0';
       container.style.borderRadius = '12px';
@@ -80,15 +80,8 @@
       div.innerHTML = html;
   
       const titleElement = document.querySelector('h1, .movie-title');
-      //if (titleElement) titleElement.insertAdjacentElement('afterend', div);
-  
-      const videoElement = document.querySelector('video, .movie-video');
-      if (videoElement) {
-        videoElement.insertAdjacentElement('afterend', div);
-      } else if (titleElement) {
-        titleElement.insertAdjacentElement('afterend', div);
-      }
-      
+      if (titleElement) titleElement.insertAdjacentElement('afterend', div);
+        
 
       // Jump to time in video if user clicks timestamp
       div.addEventListener('click', e => {
