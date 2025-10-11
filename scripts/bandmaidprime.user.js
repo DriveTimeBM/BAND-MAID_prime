@@ -120,50 +120,16 @@
     };
   
     // Main
- // --- Setup global state ---
-let currentVideoId = null;
-let setlistsCache = null;
-
-async function initOverlay() {
-  if (!setlistsCache) {
-    try {
-      setlistsCache = await loadSetlists();
-    } catch (err) {
-      console.error('Failed to load BAND-MAID setlists:', err);
-      return;
-    }
-  }
-
-  const newVideoId = getVideoId();
-  if (!newVideoId) return;
-
-  // Only update if we’re on a new video
-  if (newVideoId !== currentVideoId) {
-    currentVideoId = newVideoId;
-
-    // Remove any existing overlay before adding a new one
-    const old = document.querySelector('#bandmaid-summary-box');
-    if (old) old.remove();
-
-    const data = setlistsCache[newVideoId];
-    renderSummary(data, setlistsCache);
-  }
-}
-
-// --- Run once on initial load ---
-initOverlay();
-
-// --- Watch for SPA (dynamic navigation) changes ---
-const observer = new MutationObserver(() => {
-  const maybeNewId = getVideoId();
-  if (maybeNewId && maybeNewId !== currentVideoId) {
-    initOverlay();
-  }
-});
-
-// Observe the whole document for dynamic page reloads
-observer.observe(document.body, { childList: true, subtree: true });
-
-
+    window.addEventListener('load', async () => {
+      const videoId = getVideoId();
+      if (!videoId) return;
+  
+      try {
+        const setlists = await loadSetlists();
+        renderSummary(setlists[videoId], setlists);
+      } catch (err) {
+        console.error('Failed to load BAND-MAID setlists:', err);
+      }
+    });
   })();
   
