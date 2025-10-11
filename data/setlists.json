@@ -1,10 +1,10 @@
 {
     "111974": {
-        "title": "BAND-MAID U.S. TOUR 2022 BEHIND-THE SCENES  part 1 of 4",
+        "title": "BAND-MAID U.S. TOUR 2022 BEHIND-THE SCENES part 1 of 4",
         "tour": "BAND-MAID US TOUR 2022",
-        "venue": "Grand Oriental Minato-mirai",
-        "date": "2021-12-06",
-        "notes": "Pre-recorded in Yokohama",
+        "venue": "SEA,SF,LA,SD",
+        "date": "2022-10-08 thru 17",
+        "notes": "Aftershock not included",
         "setlist": [
           { "time": "00:00", "song": "Travel to SF" },
           { "time": "04:18", "song": "Neptune (Seattle)" },
@@ -14,6 +14,21 @@
           { "time": "22:17", "song": "Day off (LA)" }
         ],
         "next": "111976"
+      },
+      "111976": {
+        "title": "BAND-MAID U.S. TOUR 2022 BEHIND-THE SCENES part 2 of 4",
+        "tour": "BAND-MAID US TOUR 2022",
+        "venue": "PHX,DAL,HOU",
+        "date": "2022-10-19 thru 17",
+        "notes": "",
+        "setlist": [
+          { "time": "00:00", "song": "Crescent Ballroom (PHX)" },
+          { "time": "02:16", "song": "HoB (Dallas)" },
+          { "time": "10:39", "song": "HoB (HOU)" },
+          { "time": "14:04", "song": "Day off (TN)" }
+        ],
+        "previous": "111974",
+        "next": "111977"
       },
       "81253": {
         "title": "[OKYUJI] BAND-MAID ONLINE ACOUSTIC (Dec 25, 2021) part 1 of 4",
