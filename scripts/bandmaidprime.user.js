@@ -91,10 +91,10 @@
             html += `<a href="https://bandmaidprime.tokyo/movies/${data.next}" style="color:#333; text-decoration:none; background:#f9d5e2; padding:6px 10px; border-radius:8px;">Next: ${next ? next.title.replace(/\[OKYUJI\]\s*/,'') : 'Part +' } ➡️</a>`;
           }
           // Super-Hackey fix for TamperMonkey duplicate issue.
-          html += `<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>`;
+          html += `<br><br><br><br><br><br><br><br><br><br><br></div>`;
         }
       } else {
-        html += '<br>';
+        html += '<br><br><br><br><br><br><br><br><br><br><br><br>';
       }
   
       const div = document.createElement('div');
