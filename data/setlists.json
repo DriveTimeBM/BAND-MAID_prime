@@ -25,14 +25,46 @@
           { "time": "00:00", "song": "Different" },
           { "time": "03:41", "song": "Rinne [輪廻]" },
           { "time": "07:01", "song": "Azure" },
-          { "time": "09:45", "song": "start over" },
+          { "time": "09:45", "song": "start over (ext. intro)" },
           { "time": "13:25", "song": "Catharsis [カタルシス]" },
           { "time": "16:46", "song": "Daydreaming" },
           { "time": "21:08", "song": "Don't Be Long" },
           { "time": "24:32", "song": "Rock in me" }
         ],
         "previous": "70262",
-        "next": "70563"
+        "next": "70751"
+      },
+      "70751": {
+        "title": "[OKYUJI] BAND-MAID ONLINE OKYU-JI (Dec. 13, 2020) part 3",
+        "tour": "livestream",
+        "venue": "harevutai",
+        "date": "2020-12-13",
+        "notes": "Part 3 of 4",
+        "setlist": [
+          { "time": "00:00", "song": "DOMINATION" },
+          { "time": "03:54", "song": "Spirit!!" },
+          { "time": "07:34", "song": "the non-fiction days" },
+          { "time": "12:40", "song": "After Life (debut)" },
+          { "time": "16:20", "song": "Alone (ext. intro)" },
+          { "time": "21:04", "song": "Choose me" }
+        ],
+        "previous": "70563",
+        "next": "71022"
+      },      
+      "71022": {
+        "title": "[OKYUJI] BAND-MAID ONLINE OKYU-JI (Dec. 13, 2020) part 4",
+        "tour": "livestream",
+        "venue": "harevutai",
+        "date": "2020-12-13",
+        "notes": "Part 4 of 4",
+        "setlist": [
+          { "time": "00:00", "song": "MC" },
+          { "time": "01:12", "song": "REAL EXISTENCE" },
+          { "time": "05:24", "song": "Screaming" },
+          { "time": "09:25", "song": "Play" },
+          { "time": "13:00", "song": "Different (2nd time)" }
+        ],
+        "previous": "70751"
       },
       "90808": {
         "title": "AKANE's OMAJINAI TIME",

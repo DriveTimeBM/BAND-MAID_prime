@@ -66,7 +66,7 @@
         if (data.notes) html += `<strong>Notes:</strong> ${data.notes}<br><br>`;
   
         if (data.setlist && data.setlist.length) {
-          html += `<strong>Setlist:</strong><br><ol style="margin-top:4px;">`;
+          html += `<strong>Contents:</strong><br><ol style="margin-top:4px;">`;
           for (const entry of data.setlist) {
             if (entry.time) {
               const [min, sec] = entry.time.split(':').map(Number);
