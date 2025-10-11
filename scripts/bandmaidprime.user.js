@@ -40,8 +40,9 @@
   
     // Create the overlay
     const renderSummary = (data, setlists) => {
-      // ✅ Prevent duplicates
-      if (document.querySelector('#bandmaid-summary-box')) return;
+      // 💥 Always remove any existing overlay first
+      const existing = document.querySelector('#bandmaid-summary-box');
+      if (existing) existing.remove();
 
       const container = document.createElement('div');
       container.id = 'bandmaid-summary-box';
