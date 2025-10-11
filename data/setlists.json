@@ -1,5 +1,34 @@
 {
-    "58426": {
+    "81253": {
+        "title": "[OKYUJI] BAND-MAID ONLINE ACOUSTIC (Dec 25, 2021) part 1",
+        "tour": "Christmas stream",
+        "venue": "Yokohama Grand Oriental Minato-mirai",
+        "date": "2021-12-06",
+        "notes": "Part 1 of 4",
+        "setlist": [
+          { "time": "00:00", "song": "Smile" },
+          { "time": "04:50", "song": "At the drop of a hat" },
+          { "time": "09:00", "song": "No God" },
+          { "time": "13:35", "song": "H-G-K" }
+        ],
+        "next": "81722"
+      },
+      "81722": {
+        "title": "[OKYUJI] BAND-MAID ONLINE ACOUSTIC (Dec 25, 2021) part 2",
+        "tour": "Christmas stream",
+        "venue": "Yokohama Grand Oriental Minato-mirai",
+        "date": "2021-12-06",
+        "notes": "Part 2 of 4",
+        "setlist": [
+          { "time": "00:00", "song": "Different (Saiki, Kanami)" },
+          { "time": "04:42", "song": "Manners (Saiki, Kanami)" },
+          { "time": "10:31", "song": "Awkward (Saiki, Kanami, MISA)" },
+          { "time": "14:22", "song": "Wonderland (Saiki, Kanami, MISA)" }
+        ],
+        "previous": "81253",
+        "next": "82009"
+      },
+      "58426": {
         "title": "BAND-MAID OKYUJI TOUR Autumn-Winter 2017「Moeruno? Moenaino? Docchinano!?」』Tour Final @Tokyo・SHINKIBA STUDIO COAST Part 1",
         "tour": "Okyuji TOUR Autumn-Winter 2017 [Moeruno? Moenaino? Docchinano!?]",
         "venue": "SHINKIBA STUDIO COAST",
@@ -14,7 +43,7 @@
           { "time": "16:48", "song": "Cross" },
           { "time": "20:32", "song": "Matchless Gum" },
           { "time": "23:40", "song": "Awkward" },
-          { "time": "27:56", "song": "Daydreaming" }
+          { "time": "27:56", "song": "Daydreaming (ext. intro)" }
         ],
         "next": "58839"
       },
