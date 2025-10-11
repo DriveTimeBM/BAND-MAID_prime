@@ -40,11 +40,7 @@
   
     const renderSummary = (data) => {
       const container = document.createElement('div');
-      //container.style.marginTop = '120px';
-      container.style.margin = '200px auto 40px auto';  // top / sides / bottom
-      container.style.display = 'block';
-      container.style.maxWidth = '800px';
-
+      container.style.marginTop = '20px';
       container.style.padding = '12px 16px';
       container.style.border = '2px solid #f2a2c0';
       container.style.borderRadius = '12px';
@@ -55,6 +51,12 @@
       let html = '';
   
       if (data) {
+        html += `-`
+        html += `-`
+        html += `-`
+        html += `-`
+        html += `-`
+        html += `-`
         html += `<strong>🎸 Okyuji (Live Performance)</strong><br><br>`;
         html += `<strong>Title:</strong> ${data.title}<br>`;
         if (data.tour) html += `<strong>Tour:</strong> ${data.tour}<br>`;
