@@ -58,7 +58,7 @@
       let html = '<br><br><br><br>'; // spacer to push lower
   
       if (data) {
-        html += `<strong>🎸 Okyuji (Live Performance)</strong><br><br>`;
+        html += `<strong>🎸 Supplemental Information 🎸</strong><br><br>`;
         html += `<strong>Title:</strong> ${data.title}<br>`;
         if (data.tour) html += `<strong>Tour:</strong> ${data.tour}<br>`;
         if (data.venue) html += `<strong>Venue:</strong> ${data.venue}<br>`;
