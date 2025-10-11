@@ -28,6 +28,34 @@
         "previous": "81253",
         "next": "82009"
       },
+      "82009": {
+        "title": "[OKYUJI] BAND-MAID ONLINE ACOUSTIC (Dec 25, 2021) part 3",
+        "tour": "Christmas stream",
+        "venue": "Yokohama Grand Oriental Minato-mirai",
+        "date": "2021-12-06",
+        "notes": "Part 3 of 4",
+        "setlist": [
+          { "time": "00:29", "song": "TIME (Miku, Akane, MISA)" },
+          { "time": "04:29", "song": "SAYONAKIDORI [サヨナキドリ] (Miku, Akane, MISA)" },
+          { "time": "10:23", "song": "FOREWORD (Saiki, Miku, Akane)" }
+        ],
+        "previous": "81722",
+        "next": "83228"
+      },
+      "83228": {
+        "title": "[OKYUJI] BAND-MAID ONLINE ACOUSTIC (Dec 25, 2021) part 4",
+        "tour": "Christmas stream",
+        "venue": "Yokohama Grand Oriental Minato-mirai",
+        "date": "2021-12-06",
+        "notes": "Part 4 of 4",
+        "setlist": [
+          { "time": "00:29", "song": "Catharsis [カタルシス]" },
+          { "time": "03:42", "song": "Mirage" },
+          { "time": "07:40", "song": "Extended MC" },
+          { "time": "17:14", "song": "Page" }
+        ],
+        "previous": "82009"
+      },
       "58426": {
         "title": "BAND-MAID OKYUJI TOUR Autumn-Winter 2017「Moeruno? Moenaino? Docchinano!?」』Tour Final @Tokyo・SHINKIBA STUDIO COAST Part 1",
         "tour": "Okyuji TOUR Autumn-Winter 2017 [Moeruno? Moenaino? Docchinano!?]",
