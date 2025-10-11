@@ -1,5 +1,21 @@
 {
-    "81253": {
+    "111974": {
+        "title": "BAND-MAID U.S. TOUR 2022 BEHIND-THE SCENES  part 1 of 4",
+        "tour": "BAND-MAID US TOUR 2022",
+        "venue": "Grand Oriental Minato-mirai",
+        "date": "2021-12-06",
+        "notes": "Pre-recorded in Yokohama",
+        "setlist": [
+          { "time": "00:00", "song": "Travel to SF" },
+          { "time": "04:18", "song": "Neptune (Seattle)" },
+          { "time": "09:30", "song": "August Hall (SF)" },
+          { "time": "12:41", "song": "Belasco (LA)" },
+          { "time": "18:43", "song": "House of Blues (SD)" },
+          { "time": "22:17", "song": "Day off (LA)" }
+        ],
+        "next": "111976"
+      },
+      "81253": {
         "title": "[OKYUJI] BAND-MAID ONLINE ACOUSTIC (Dec 25, 2021) part 1 of 4",
         "tour": "Christmas stream",
         "venue": "Grand Oriental Minato-mirai",
