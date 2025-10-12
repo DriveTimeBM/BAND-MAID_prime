@@ -105,29 +105,39 @@ async function createSearchBox(container) {
   wrapper.appendChild(input);
   wrapper.appendChild(resultsBox);
 
-// ✅ Always visible: appended to body and positioned under overlay
+  // ** Insertion block **
+  
+// ✅ Always visible: appended to body and positioned *below* overlay
 if (document.querySelector('#bandmaid-search-box')) return;
 
 document.body.appendChild(wrapper);
 
-// wait until overlay exists and measure position
 setTimeout(() => {
   const overlay = document.querySelector('#bandmaid-summary-box');
   const rect = overlay ? overlay.getBoundingClientRect() : null;
 
-  wrapper.style.position = 'absolute';
-  wrapper.style.left = rect ? rect.left + 'px' : '40px';
-  wrapper.style.width = rect ? rect.width + 'px' : '60%';
-  wrapper.style.top = rect ? window.scrollY + rect.bottom + 20 + 'px' : '200px';
-  wrapper.style.zIndex = '9999';
-  wrapper.style.background = '#fffafc';
-  wrapper.style.border = '2px solid #f2a2c0';
-  wrapper.style.borderRadius = '12px';
-  wrapper.style.padding = '12px 16px';
-  wrapper.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
-}, 500);
+  // compute position: below overlay + scroll offset
+  const topOffset = rect ? window.scrollY + rect.bottom + 40 : 300; // +40px gap
+  const leftOffset = rect ? rect.left : 40;
+  const width = rect ? rect.width : 600;
+
+  // Styling for visibility and alignment
+  Object.assign(wrapper.style, {
+    position: 'absolute',
+    left: `${leftOffset}px`,
+    top: `${topOffset}px`,
+    width: `${width}px`,
+    zIndex: 9999,
+    background: '#fffafc',
+    border: '2px solid #f2a2c0',
+    borderRadius: '12px',
+    padding: '12px 16px',
+    boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+  });
+}, 600);
 
 
+// *END Insertion block
   
   // Add spacing so it never overlaps site header
   wrapper.style.marginTop = '40px';
