@@ -69,21 +69,29 @@ async function loadPrimeData() {
  * Creates and injects the search box above or below your overlay.
  * @param {HTMLElement} container The overlay container element.
  */
-function createSearchBox(container) {
+async function createSearchBox(container) {
+  // Avoid duplicates
+  if (document.querySelector('#bandmaid-search-box')) return;
+
+  // Wait for overlay to actually render
+  await new Promise(resolve => setTimeout(resolve, 300));
+
   const wrapper = document.createElement('div');
-  wrapper.style.margin = '10px 0 20px 0';
+  wrapper.id = 'bandmaid-search-box';
+  wrapper.style.margin = '15px 0 25px 0';
   wrapper.style.textAlign = 'left';
   wrapper.style.fontFamily = 'monospace';
 
   const input = document.createElement('input');
   input.type = 'text';
-  input.placeholder = 'Search BAND-MAID Prime (e.g., BTS, Studio Coast)...';
+  input.placeholder = '🔍 Search BAND-MAID Prime (e.g., BTS, Studio Coast)...';
   input.style.width = '100%';
   input.style.padding = '8px 10px';
   input.style.border = '1px solid #ccc';
   input.style.borderRadius = '8px';
   input.style.fontSize = '14px';
   input.style.boxSizing = 'border-box';
+  input.style.background = '#fffafc';
 
   const resultsBox = document.createElement('div');
   resultsBox.style.marginTop = '10px';
@@ -96,16 +104,23 @@ function createSearchBox(container) {
 
   wrapper.appendChild(input);
   wrapper.appendChild(resultsBox);
-  //container.insertAdjacentElement('beforebegin', wrapper);
-  container.insertAdjacentElement('afterend', wrapper);
 
-  // Add input listener
+  // ✅ Now attach near overlay if possible
+  if (container && container.parentNode) {
+    container.parentNode.insertBefore(wrapper, container);
+  } else {
+    // fallback: attach near title
+    const title = document.querySelector('h1, .movie-title');
+    if (title) title.insertAdjacentElement('afterend', wrapper);
+    else document.body.prepend(wrapper);
+  }
+
+  // --- Search behavior ---
   input.addEventListener('input', async e => {
     const query = e.target.value.trim().toLowerCase();
-    if (!query) {
-      resultsBox.innerHTML = '';
-      return;
-    }
+    resultsBox.innerHTML = '';
+
+    if (!query) return;
 
     const data = await loadPrimeData();
     const matches = data.filter(entry =>
@@ -123,13 +138,14 @@ function createSearchBox(container) {
         const title = entry.Title || '(No Title)';
         const cat = entry.Category ? `<span style="color:#999;">[${entry.Category}]</span> ` : '';
         const url = entry.URL || entry.Link || '#';
-        return `<div><a href="${url}" target="_blank" style="text-decoration:none; color:#d12d6d;">${cat}${title}</a></div>`;
+        return `<div style="margin-bottom:6px;"><a href="${url}" target="_blank" style="text-decoration:none; color:#d12d6d;">${cat}${title}</a></div>`;
       })
       .join('');
   });
 }
 
-    // ** SEARCH **
+
+    // ** end SEARCH **
 
     // Create the overlay
     const renderSummary = (data, setlists) => {
