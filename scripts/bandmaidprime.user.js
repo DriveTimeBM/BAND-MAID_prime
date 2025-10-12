@@ -117,7 +117,7 @@ setTimeout(() => {
   const rect = overlay ? overlay.getBoundingClientRect() : null;
 
   // compute position: below overlay + scroll offset
-  const topOffset = rect ? window.scrollY + rect.bottom + 100 : 300; // +40px gap
+  const topOffset = rect ? window.scrollY + rect.bottom + 200 : 300; // +40px gap
   const leftOffset = rect ? rect.left : 40;
   const width = rect ? rect.width : 600;
 
