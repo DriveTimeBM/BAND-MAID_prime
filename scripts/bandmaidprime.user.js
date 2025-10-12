@@ -105,19 +105,26 @@ async function createSearchBox(container) {
   wrapper.appendChild(input);
   wrapper.appendChild(resultsBox);
 
-  // ✅ Now attach near overlay if possible
-  if (container && container.parentNode) {
-    // ✅ Place directly BELOW the overlay instead of above it
-    container.insertAdjacentElement('afterend', wrapper);
-  } else {
-    // fallback if overlay not found yet
-    const title = document.querySelector('h1, .movie-title');
-    if (title) {
-      title.insertAdjacentElement('afterend', wrapper);
-    } else {
-      document.body.appendChild(wrapper);
-    }
-  }
+// ✅ Place INSIDE your overlay, at the very bottom
+if (container) {
+  const searchWrapper = document.createElement('div');
+  searchWrapper.id = 'bandmaid-search-box';
+  searchWrapper.style.marginTop = '24px';
+  searchWrapper.style.paddingTop = '10px';
+  searchWrapper.style.borderTop = '1px solid #f2a2c0';
+  searchWrapper.style.background = '#fffafc';
+  searchWrapper.style.position = 'relative';
+  searchWrapper.appendChild(input);
+  searchWrapper.appendChild(resultsBox);
+
+  container.appendChild(searchWrapper);
+} else {
+  // Fallback if overlay not yet found
+  const title = document.querySelector('h1, .movie-title');
+  if (title) title.insertAdjacentElement('afterend', wrapper);
+  else document.body.appendChild(wrapper);
+}
+
   
   // Add spacing so it never overlaps site header
   wrapper.style.marginTop = '40px';
