@@ -129,9 +129,10 @@ const tryPosition = () => {
   }
 
   // Once stable, position the search box
-  const topOffset = window.scrollY + rect.bottom + 40; // adjust spacing here
+  const topOffset = window.scrollY + rect.bottom + 0; // adjust spacing here
   const leftOffset = rect.left;
-  const width = rect.width;
+  //const width = rect.width;
+  const width = 300;
 
   Object.assign(wrapper.style, {
     position: 'absolute',
