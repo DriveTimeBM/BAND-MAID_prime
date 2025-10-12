@@ -1,5 +1,30 @@
 {
-    "55814": {
+    "55891": {
+        "title": "[OKYUJI] BAND-MAID ONLINE OKYU-JI (Aug. 16, 2020)",
+        "tour": "livestream",
+        "venue": "harevutai",
+        "date": "2020-08-16",
+        "notes": "2nd livestream",
+        "setlist": [
+          { "time": "00:13", "song": "SE" },
+          { "time": "02:15", "song": "Alone" },
+          { "time": "05:43", "song": "Liberal" },
+          { "time": "08:42", "song": "secret MY lips" },
+          { "time": "13:26", "song": "MC" },
+          { "time": "14:49", "song": "Blooming" },
+          { "time": "18:35", "song": "Play (ext. intro)" },
+          { "time": "22:55", "song": "Puzzle" },
+          { "time": "27:25", "song": "Choose me" },
+          { "time": "31:05", "song": "DICE" },
+          { "time": "45:39", "song": "MC/Omajinai Time" },
+          { "time": "46:09", "song": "REAL EXISTENCE" },
+          { "time": "50:20", "song": "Thrill [スリル]" },
+          { "time": "54:34", "song": "DOMINATION" },
+          { "time": "58:24", "song": "Moratorium [モラトリアム]" },
+          { "time": "1:03:00", "song": "Screaming" }
+        ]
+      },
+      "55814": {
         "title": "[OKYUJI] BAND-MAID ONLINE OKYU-JI (July. 23, 2020)",
         "tour": "livestream",
         "venue": "harevutai",
