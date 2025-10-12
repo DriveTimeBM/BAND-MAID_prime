@@ -107,13 +107,21 @@ async function createSearchBox(container) {
 
   // ✅ Now attach near overlay if possible
   if (container && container.parentNode) {
-    container.parentNode.insertBefore(wrapper, container);
+    // ✅ Place directly BELOW the overlay instead of above it
+    container.insertAdjacentElement('afterend', wrapper);
   } else {
-    // fallback: attach near title
+    // fallback if overlay not found yet
     const title = document.querySelector('h1, .movie-title');
-    if (title) title.insertAdjacentElement('afterend', wrapper);
-    else document.body.prepend(wrapper);
+    if (title) {
+      title.insertAdjacentElement('afterend', wrapper);
+    } else {
+      document.body.appendChild(wrapper);
+    }
   }
+  
+  // Add spacing so it never overlaps site header
+  wrapper.style.marginTop = '40px';
+  
 
   // --- Search behavior ---
   input.addEventListener('input', async e => {
