@@ -38,6 +38,98 @@
         });
       });
   
+    // ** SEARCH **
+// =====================
+// 🔍 SEARCH FUNCTIONS
+// =====================
+
+// URL of your Prime data JSON
+const PRIME_JSON_URL = 'https://drivetimebm.github.io/BAND-MAID_gpt/prime/prime.json';
+
+let primeDataCache = null;
+
+/**
+ * Loads the prime.json file and caches it.
+ */
+async function loadPrimeData() {
+  if (primeDataCache) return primeDataCache;
+
+  try {
+    const res = await fetch(PRIME_JSON_URL);
+    primeDataCache = await res.json();
+    console.info('Loaded Prime JSON:', primeDataCache.length, 'entries');
+    return primeDataCache;
+  } catch (err) {
+    console.error('Failed to load prime.json:', err);
+    return [];
+  }
+}
+
+/**
+ * Creates and injects the search box above or below your overlay.
+ * @param {HTMLElement} container The overlay container element.
+ */
+function createSearchBox(container) {
+  const wrapper = document.createElement('div');
+  wrapper.style.margin = '10px 0 20px 0';
+  wrapper.style.textAlign = 'left';
+  wrapper.style.fontFamily = 'monospace';
+
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.placeholder = 'Search BAND-MAID Prime (e.g., BTS, Studio Coast)...';
+  input.style.width = '100%';
+  input.style.padding = '8px 10px';
+  input.style.border = '1px solid #ccc';
+  input.style.borderRadius = '8px';
+  input.style.fontSize = '14px';
+  input.style.boxSizing = 'border-box';
+
+  const resultsBox = document.createElement('div');
+  resultsBox.style.marginTop = '10px';
+  resultsBox.style.fontSize = '14px';
+  resultsBox.style.lineHeight = '1.5';
+  resultsBox.style.maxHeight = '200px';
+  resultsBox.style.overflowY = 'auto';
+  resultsBox.style.borderTop = '1px solid #eee';
+  resultsBox.style.paddingTop = '10px';
+
+  wrapper.appendChild(input);
+  wrapper.appendChild(resultsBox);
+  container.insertAdjacentElement('beforebegin', wrapper);
+
+  // Add input listener
+  input.addEventListener('input', async e => {
+    const query = e.target.value.trim().toLowerCase();
+    if (!query) {
+      resultsBox.innerHTML = '';
+      return;
+    }
+
+    const data = await loadPrimeData();
+    const matches = data.filter(entry =>
+      (entry.Title && entry.Title.toLowerCase().includes(query)) ||
+      (entry.Category && entry.Category.toLowerCase().includes(query))
+    );
+
+    if (!matches.length) {
+      resultsBox.innerHTML = `<div style="color:#888;">No matches found.</div>`;
+      return;
+    }
+
+    resultsBox.innerHTML = matches
+      .map(entry => {
+        const title = entry.Title || '(No Title)';
+        const cat = entry.Category ? `<span style="color:#999;">[${entry.Category}]</span> ` : '';
+        const url = entry.URL || entry.Link || '#';
+        return `<div><a href="${url}" target="_blank" style="text-decoration:none; color:#d12d6d;">${cat}${title}</a></div>`;
+      })
+      .join('');
+  });
+}
+
+    // ** SEARCH **
+
     // Create the overlay
     const renderSummary = (data, setlists) => {
       // 💥 Always remove any existing overlay first
@@ -102,6 +194,10 @@
       const titleElement = document.querySelector('h1, .movie-title');
       if (titleElement) titleElement.insertAdjacentElement('afterend', div);
   
+      // ** SEARCH **
+      createSearchBox(container);
+
+
       // Timestamp jump
       div.addEventListener('click', e => {
         if (e.target.tagName === 'A' && e.target.href.includes('#t=')) {
