@@ -92,6 +92,17 @@ async function createSearchBox(container) {
   input.style.fontSize = '14px';
   input.style.boxSizing = 'border-box';
   input.style.background = '#fffafc';
+  input.style.color = '#333';              // dark gray readable text
+  input.style.backgroundColor = '#fff';    // solid white background
+  
+  input.addEventListener('focus', () => {
+    input.style.outline = 'none';
+    input.style.boxShadow = '0 0 4px #f2a2c0';
+  });
+  input.addEventListener('blur', () => {
+    input.style.boxShadow = 'none';
+  });
+  
 
   const resultsBox = document.createElement('div');
   resultsBox.style.marginTop = '10px';
