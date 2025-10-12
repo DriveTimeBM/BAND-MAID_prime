@@ -15,7 +15,7 @@ This userscript automatically adds an overlay on applicable BAND-MAID PRIME vide
 - 🔗 **Next / Previous part navigation** for multi-part Okyuji videos  
 - 💬 Contextual notes (e.g., “Part 2 of 3 from the Zepp Tokyo performance”)  
 
-The overlay updates dynamically when switching between videos — no page reload required.
+The overlay updates dynamically when switching between videos — no page reload required. The overlay goes away in full screen mode.
 
 ---
 
