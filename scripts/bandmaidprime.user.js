@@ -84,7 +84,7 @@ async function createSearchBox(container) {
 
   const input = document.createElement('input');
   input.type = 'text';
-  input.placeholder = '🔍 Search BAND-MAID Prime (e.g., BTS, Studio Coast)...';
+  input.placeholder = '🔍 Search BAND-MAID Prime (e.g., BTS, DAY OF MAID)...';
   input.style.width = '100%';
   input.style.padding = '8px 10px';
   input.style.border = '1px solid #ccc';
