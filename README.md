@@ -17,6 +17,8 @@ This userscript automatically adds an overlay on applicable BAND-MAID PRIME vide
 
 The overlay updates dynamically when switching between videos — no page reload required. The overlay goes away in full screen mode.
 
+It also adds a Search Bar on all Prime videos. The Search Bar is at the very bottom so you'll have to scroll down to see it. You can search for strings in the title or category (i.e. BTS, okyuji, etc). All matches are clickable.
+
 ---
 
 ## ⚙️ Installation
