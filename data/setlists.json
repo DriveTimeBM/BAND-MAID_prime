@@ -1,6 +1,63 @@
 {
+    "86511": {
+        "title": "ONLINE ACOUSTIC (Dec 25, 2021) audio commentary part 1 of 4",
+        "tour": "Christmas stream",
+        "venue": "Grand Oriental Minato-mirai",
+        "date": "2021-12-06",
+        "notes": "Pre-recorded in Yokohama",
+        "setlist": [
+          { "time": "00:00", "song": "Smile" },
+          { "time": "04:50", "song": "At the drop of a hat" },
+          { "time": "09:00", "song": "No God" },
+          { "time": "13:35", "song": "H-G-K" }
+        ],
+        "next": "87001"
+      },
+      "87001": {
+        "title": "ONLINE ACOUSTIC (Dec 25, 2021) audio commentary part 2 of 4",
+        "tour": "Christmas stream",
+        "venue": "Grand Oriental Minato-mirai",
+        "date": "2021-12-06",
+        "notes": "Pre-recorded in Yokohama",
+        "setlist": [
+          { "time": "00:00", "song": "Different (Saiki, Kanami)" },
+          { "time": "04:42", "song": "Manners (Saiki, Kanami)" },
+          { "time": "10:31", "song": "Awkward (Saiki, Kanami, MISA)" },
+          { "time": "14:22", "song": "Wonderland (Saiki, Kanami, MISA)" }
+        ],
+        "previous": "86511",
+        "next": "87087"
+      },
+      "87087": {
+        "title": "ONLINE ACOUSTIC (Dec 25, 2021) audio commentary part 3 of 4",
+        "tour": "Christmas stream",
+        "venue": "Grand Oriental Minato-mirai",
+        "date": "2021-12-06",
+        "notes": "Pre-recorded in Yokohama",
+        "setlist": [
+          { "time": "00:29", "song": "TIME (Miku, Akane, MISA)" },
+          { "time": "04:29", "song": "SAYONAKIDORI [サヨナキドリ] (Miku, Akane, MISA)" },
+          { "time": "10:23", "song": "FOREWORD (Saiki, Miku, Akane)" }
+        ],
+        "previous": "87001",
+        "next": "87358"
+      },
+      "87358": {
+        "title": "ONLINE ACOUSTIC (Dec 25, 2021) audio commentary part 4 of 4",
+        "tour": "Christmas stream",
+        "venue": "Grand Oriental Minato-mirai",
+        "date": "2021-12-06",
+        "notes": "Pre-recorded in Yokohama",
+        "setlist": [
+          { "time": "00:29", "song": "Catharsis [カタルシス]" },
+          { "time": "03:42", "song": "Mirage" },
+          { "time": "07:40", "song": "Extended MC" },
+          { "time": "17:14", "song": "Page" }
+        ],
+        "previous": "87087"
+      },
     "55891": {
-        "title": "[OKYUJI] BAND-MAID ONLINE OKYU-JI (Aug. 16, 2020)",
+        "title": "ONLINE OKYU-JI (Aug. 16, 2020)",
         "tour": "livestream",
         "venue": "harevutai",
         "date": "2020-08-16",
@@ -25,7 +82,7 @@
         ]
       },
       "55814": {
-        "title": "[OKYUJI] BAND-MAID ONLINE OKYU-JI (July. 23, 2020)",
+        "title": "ONLINE OKYU-JI (July. 23, 2020)",
         "tour": "livestream",
         "venue": "harevutai",
         "date": "2020-07-23",
@@ -48,7 +105,7 @@
         ]
       },
       "111974": {
-        "title": "BAND-MAID U.S. TOUR 2022 BEHIND-THE SCENES part 1 of 4",
+        "title": "U.S. TOUR 2022 BEHIND-THE SCENES part 1 of 4",
         "tour": "BAND-MAID US TOUR 2022",
         "venue": "SEA,SF,LA,SD",
         "date": "2022-10-08 thru 17",
@@ -64,7 +121,7 @@
         "next": "111976"
       },
       "111976": {
-        "title": "BAND-MAID U.S. TOUR 2022 BEHIND-THE SCENES part 2 of 4",
+        "title": "U.S. TOUR 2022 BEHIND-THE SCENES part 2 of 4",
         "tour": "BAND-MAID US TOUR 2022",
         "venue": "PHX,DAL,HOU",
         "date": "2022-10-19 thru 24",
@@ -79,7 +136,7 @@
         "next": "111977"
       },
       "111977": {
-        "title": "BAND-MAID U.S. TOUR 2022 BEHIND-THE SCENES part 3 of 4",
+        "title": "U.S. TOUR 2022 BEHIND-THE SCENES part 3 of 4",
         "tour": "BAND-MAID US TOUR 2022",
         "venue": "DC,PHI,NYC",
         "date": "2022-10-25 thru 28",
@@ -94,7 +151,7 @@
         "next": "111979"
       },
       "111979": {
-        "title": "BAND-MAID U.S. TOUR 2022 BEHIND-THE SCENES part 4 of 4",
+        "title": "U.S. TOUR 2022 BEHIND-THE SCENES part 4 of 4",
         "tour": "BAND-MAID US TOUR 2022",
         "venue": "BOS,NJ,CHI",
         "date": "2022-10-29 thru 11-01",
@@ -108,7 +165,7 @@
         "previous": "111977"
       },
       "81253": {
-        "title": "[OKYUJI] BAND-MAID ONLINE ACOUSTIC (Dec 25, 2021) part 1 of 4",
+        "title": "ONLINE ACOUSTIC (Dec 25, 2021) part 1 of 4",
         "tour": "Christmas stream",
         "venue": "Grand Oriental Minato-mirai",
         "date": "2021-12-06",
@@ -122,7 +179,7 @@
         "next": "81722"
       },
       "81722": {
-        "title": "[OKYUJI] BAND-MAID ONLINE ACOUSTIC (Dec 25, 2021) part 2 of 4",
+        "title": "ONLINE ACOUSTIC (Dec 25, 2021) part 2 of 4",
         "tour": "Christmas stream",
         "venue": "Grand Oriental Minato-mirai",
         "date": "2021-12-06",
@@ -137,7 +194,7 @@
         "next": "82009"
       },
       "82009": {
-        "title": "[OKYUJI] BAND-MAID ONLINE ACOUSTIC (Dec 25, 2021) part 3 of 4",
+        "title": "ONLINE ACOUSTIC (Dec 25, 2021) part 3 of 4",
         "tour": "Christmas stream",
         "venue": "Grand Oriental Minato-mirai",
         "date": "2021-12-06",
@@ -151,7 +208,7 @@
         "next": "83228"
       },
       "83228": {
-        "title": "[OKYUJI] BAND-MAID ONLINE ACOUSTIC (Dec 25, 2021) part 4 of 4",
+        "title": "ONLINE ACOUSTIC (Dec 25, 2021) part 4 of 4",
         "tour": "Christmas stream",
         "venue": "Grand Oriental Minato-mirai",
         "date": "2021-12-06",
@@ -165,7 +222,7 @@
         "previous": "82009"
       },
       "58426": {
-        "title": "BAND-MAID OKYUJI TOUR Autumn-Winter 2017「Moeruno? Moenaino? Docchinano!?」』Tour Final @Tokyo・SHINKIBA STUDIO COAST Part 1",
+        "title": "OKYUJI Autumn-Winter 2017 Tour Final @Tokyo・SHINKIBA STUDIO COAST Part 1",
         "tour": "Okyuji TOUR Autumn-Winter 2017 [Moeruno? Moenaino? Docchinano!?]",
         "venue": "SHINKIBA STUDIO COAST",
         "date": "2017-11-24",
@@ -184,7 +241,7 @@
         "next": "58839"
       },
       "58839": {
-        "title": "BAND-MAID OKYUJI TOUR Autumn-Winter 2017「Moeruno? Moenaino? Docchinano!?」』Tour Final @Tokyo・SHINKIBA STUDIO COAST Part 2",
+        "title": "OKYUJI Autumn-Winter 2017 Tour Final @Tokyo・SHINKIBA STUDIO COAST Part 2",
         "tour": "Okyuji TOUR Autumn-Winter 2017 [Moeruno? Moenaino? Docchinano!?]",
         "venue": "SHINKIBA STUDIO COAST",
         "date": "2017-11-24",
@@ -202,7 +259,7 @@
         "previous": "58426"
       },
       "70262": {
-        "title": "[OKYUJI] BAND-MAID ONLINE OKYU-JI (Dec. 13, 2020) part 1",
+        "title": "ONLINE OKYU-JI (Dec. 13, 2020) part 1",
         "tour": "livestream",
         "venue": "harevutai",
         "date": "2020-12-13",
@@ -218,7 +275,7 @@
         "next": "70563"
       },
       "70563": {
-        "title": "[OKYUJI] BAND-MAID ONLINE OKYU-JI (Dec. 13, 2020) part 2",
+        "title": "ONLINE OKYU-JI (Dec. 13, 2020) part 2",
         "tour": "livestream",
         "venue": "harevutai",
         "date": "2020-12-13",
@@ -237,7 +294,7 @@
         "next": "70751"
       },
       "70751": {
-        "title": "[OKYUJI] BAND-MAID ONLINE OKYU-JI (Dec. 13, 2020) part 3",
+        "title": "ONLINE OKYU-JI (Dec. 13, 2020) part 3",
         "tour": "livestream",
         "venue": "harevutai",
         "date": "2020-12-13",
@@ -254,7 +311,7 @@
         "next": "71022"
       },      
       "71022": {
-        "title": "[OKYUJI] BAND-MAID ONLINE OKYU-JI (Dec. 13, 2020) part 4",
+        "title": "ONLINE OKYU-JI (Dec. 13, 2020) part 4",
         "tour": "livestream",
         "venue": "harevutai",
         "date": "2020-12-13",
@@ -279,11 +336,11 @@
         ]
       },   
       "111566": {
-        "title": "[OKYUJI] BAND-MAID *THE DAY OF MAID* (May 10, 2021)  from  *Sense* first press limited edition",
+        "title": "THE DAY OF MAID (May 10, 2021)",
         "tour": "livestream",
         "venue": "harevutai",
         "date": "2021-05-10",
-        "notes": "Part 1 of 1",
+        "notes": "from  *Sense* first press limited edition",
         "setlist": [
           { "time": "00:00", "song": "I still seek revenge." },
           { "time": "03:20", "song": "Youth" },
@@ -294,7 +351,7 @@
         ]
       },      
       "58102": {
-        "title": "[OKYUJI] BAND-MAID 1st Full Album『Just Bring It』Pre-Release One-man 〜新年 初お給仕はじめます〜",
+        "title": "1st Full Album『Just Bring It』Pre-Release One-man 〜新年 初お給仕はじめます〜",
         "tour": "『Just Bring It』Pre-Release One-man",
         "venue": "Akasaka BLITZ",
         "date": "2017-01-09",
@@ -310,7 +367,7 @@
         ]
       },    
       "59476": {
-        "title": "[OKYUJI] BAND-MAID WORLD DOMINATION TOUR 2018【宣告】 Part 1",
+        "title": "WORLD DOMINATION TOUR 2018【宣告】 Part 1",
         "tour": "WORLD DOMINATION TOUR 2018【宣告】",
         "venue": "Zepp TOKYO",
         "date": "2018-04-13",
@@ -331,7 +388,7 @@
         "next": "59927"
       },
     "59927": {
-        "title": "[OKYUJI] BAND-MAID WORLD DOMINATION TOUR 2018【宣告】 Part 2",
+        "title": "WORLD DOMINATION TOUR 2018【宣告】 Part 2",
         "tour": "WORLD DOMINATION TOUR 2018【宣告】",
         "venue": "Zepp TOKYO",
         "date": "2018-04-13",
@@ -351,7 +408,7 @@
         "next": "61126"
       },
       "61126": {
-        "title": "[OKYUJI] BAND-MAID WORLD DOMINATION TOUR 2018【宣告】 Part 3",
+        "title": "WORLD DOMINATION TOUR 2018【宣告】 Part 3",
         "tour": "WORLD DOMINATION TOUR 2018【宣告】",
         "venue": "Zepp TOKYO",
         "date": "2018-04-13",
