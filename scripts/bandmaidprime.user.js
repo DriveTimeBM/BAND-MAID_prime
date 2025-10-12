@@ -96,7 +96,8 @@ function createSearchBox(container) {
 
   wrapper.appendChild(input);
   wrapper.appendChild(resultsBox);
-  container.insertAdjacentElement('beforebegin', wrapper);
+  //container.insertAdjacentElement('beforebegin', wrapper);
+  container.insertAdjacentElement('afterend', wrapper);
 
   // Add input listener
   input.addEventListener('input', async e => {
