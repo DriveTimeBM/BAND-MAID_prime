@@ -112,16 +112,27 @@ if (document.querySelector('#bandmaid-search-box')) return;
 
 document.body.appendChild(wrapper);
 
-setTimeout(() => {
+document.body.appendChild(wrapper);
+
+// ✅ Wait for overlay to finish expanding before positioning search box
+let lastHeight = 0;
+const tryPosition = () => {
   const overlay = document.querySelector('#bandmaid-summary-box');
-  const rect = overlay ? overlay.getBoundingClientRect() : null;
+  if (!overlay) return;
 
-  // compute position: below overlay + scroll offset
-  const topOffset = rect ? window.scrollY + rect.bottom + 200 : 300; // +40px gap
-  const leftOffset = rect ? rect.left : 40;
-  const width = rect ? rect.width : 600;
+  const rect = overlay.getBoundingClientRect();
+  if (rect.height !== lastHeight) {
+    lastHeight = rect.height;
+    // Keep checking until height stops changing
+    setTimeout(tryPosition, 300);
+    return;
+  }
 
-  // Styling for visibility and alignment
+  // Once stable, position the search box
+  const topOffset = window.scrollY + rect.bottom + 40; // adjust spacing here
+  const leftOffset = rect.left;
+  const width = rect.width;
+
   Object.assign(wrapper.style, {
     position: 'absolute',
     left: `${leftOffset}px`,
@@ -134,7 +145,11 @@ setTimeout(() => {
     padding: '12px 16px',
     boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
   });
-}, 600);
+};
+
+// Start checking right away
+tryPosition();
+
 
 
 // *END Insertion block
