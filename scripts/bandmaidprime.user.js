@@ -105,25 +105,28 @@ async function createSearchBox(container) {
   wrapper.appendChild(input);
   wrapper.appendChild(resultsBox);
 
-// ✅ Place INSIDE your overlay, at the very bottom
-if (container) {
-  const searchWrapper = document.createElement('div');
-  searchWrapper.id = 'bandmaid-search-box';
-  searchWrapper.style.marginTop = '24px';
-  searchWrapper.style.paddingTop = '10px';
-  searchWrapper.style.borderTop = '1px solid #f2a2c0';
-  searchWrapper.style.background = '#fffafc';
-  searchWrapper.style.position = 'relative';
-  searchWrapper.appendChild(input);
-  searchWrapper.appendChild(resultsBox);
+// ✅ Always visible: appended to body and positioned under overlay
+if (document.querySelector('#bandmaid-search-box')) return;
 
-  container.appendChild(searchWrapper);
-} else {
-  // Fallback if overlay not yet found
-  const title = document.querySelector('h1, .movie-title');
-  if (title) title.insertAdjacentElement('afterend', wrapper);
-  else document.body.appendChild(wrapper);
-}
+document.body.appendChild(wrapper);
+
+// wait until overlay exists and measure position
+setTimeout(() => {
+  const overlay = document.querySelector('#bandmaid-summary-box');
+  const rect = overlay ? overlay.getBoundingClientRect() : null;
+
+  wrapper.style.position = 'absolute';
+  wrapper.style.left = rect ? rect.left + 'px' : '40px';
+  wrapper.style.width = rect ? rect.width + 'px' : '60%';
+  wrapper.style.top = rect ? window.scrollY + rect.bottom + 20 + 'px' : '200px';
+  wrapper.style.zIndex = '9999';
+  wrapper.style.background = '#fffafc';
+  wrapper.style.border = '2px solid #f2a2c0';
+  wrapper.style.borderRadius = '12px';
+  wrapper.style.padding = '12px 16px';
+  wrapper.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
+}, 500);
+
 
   
   // Add spacing so it never overlaps site header
