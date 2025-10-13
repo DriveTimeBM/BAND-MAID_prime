@@ -71,19 +71,31 @@
     ],
     "next": "64750"
   },
-"64750": {
-        "title": "Making of Sense OMV",
-        "tour": "Sense single",
-        "venue": "Shinkiba Garden Factory Studio",
-        "date": "2021-10-26",
-        "notes": "04:00 run time",
-        "setlist": [
-            { "time": "00:00", "song": "Making of Sense OMV" }
-        ],
-        "previous": "57915",
-        "next": "78288"
-      },
-      "78288": {
+    "64750": {
+    "title": "Making of Sense OMV",
+    "tour": "Sense single",
+    "venue": "Shinkiba Garden Factory Studio",
+    "date": "2021-10-26",
+    "notes": "04:00 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Making of Sense OMV" }
+    ],
+    "previous": "57915",
+    "next": "69075"
+  },
+  "69075": {
+    "title": "*BAND-MAID ONLINE ACOUSTIC* BEHIND THE SCENES",
+    "tour": "Christmas stream",
+    "venue": "Grand Oriental Minato-mirai",
+    "date": "2021-12-06",
+    "notes": "04:00 run time",
+    "setlist": [
+        { "time": "00:00", "song": "ONLINE ACOUSTIC" }
+    ],
+    "previous": "64750",
+    "next": "78288"
+  },
+  "78288": {
         "title": "Making of influencer OMV",
         "tour": "Unleash EP",
         "venue": "Ishikiri Sanmyaku",
@@ -93,7 +105,7 @@
             { "time": "00:00", "song": "Making of influencer OMV" },
             { "time": "05:41", "song": "Wrap up" }
         ],
-        "previous": "64750",
+        "previous": "69075",
         "next": "90749"
       },
       "90749": {
@@ -522,7 +534,7 @@
       "90808": {
         "title": "AKANE's OMAJINAI TIME",
         "tour": "BAND-MAID 10TH ANNIVERSARY TOUR",
-        "venue": "Kawasaki  CLUB CITTA",
+        "venue": "Kawasaki CLUB CITTA",
         "date": "2023-07-19",
         "notes": "",
         "setlist": [
