@@ -1,4 +1,35 @@
 {
+  "92892": {
+    "title": "MC from BAND-MAID TOKYO GARDEN THEATER OKYUJI part 1",
+    "tour": "2022 Final - 10th Anniversary Kickoff",
+    "venue": "TOKYO GARDEN THEATER",
+    "date": "2023-01-09",
+    "notes": "08:31 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Saiki" },
+        { "time": "02:50", "song": "Saiki, MISA" },
+        { "time": "03:31", "song": "Saiki, MISA, Akane" },
+        { "time": "06:25", "song": "Call/Response" }
+    ],
+    "next": "93044"
+  },
+  "93044": {
+    "title": "MC from BAND-MAID TOKYO GARDEN THEATER OKYUJI part 2",
+    "tour": "2022 Final - 10th Anniversary Kickoff",
+    "venue": "TOKYO GARDEN THEATER",
+    "date": "2023-01-09",
+    "notes": "13:57 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Merch" },
+        { "time": "01:28", "song": "Kanami and Popo-san join" },
+        { "time": "02:10", "song": "Nails" },
+        { "time": "03:05", "song": "Lottery" },
+        { "time": "05:45", "song": "Saiki re-gifting" },
+        { "time": "11:14", "song": "MISA's Opening Ceremony" },
+        { "time": "13:15", "song": "Omajinai Time intro" }
+      ],
+    "previous": "92892"
+  },
   "107868": {
     "title": "BAND-MAID YEAR END PARTY 2024 part 1",
     "tour": "2024",
