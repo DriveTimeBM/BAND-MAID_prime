@@ -92,7 +92,7 @@
     "setlist": [
       { "time": "00:00", "song": "Entrance" },
       { "time": "00:39", "song": "Blooper 1" },
-      { "time": "01:41", "song": "Bloopers 2,3,4" }
+      { "time": "01:41", "song": "Bloopers 2,3,4" },
       { "time": "03:11", "song": "Wrap up" }
     ],
     "previous": "64750",
