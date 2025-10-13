@@ -1,4 +1,18 @@
 {
+  "58887": {
+    "title": "Super Lazy Time from BAND-MAID ONLINE OKYU-JI",
+    "tour": "livestream",
+    "venue": "harevutai",
+    "date": "2021-02-11",
+    "notes": "10:59 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Choose me malfunction" },
+        { "time": "01:27", "song": "Kanami's request" },
+        { "time": "05:57", "song": "Fan feedback" },
+        { "time": "08:01", "song": "Kanami speaks in English" },
+        { "time": "10:04", "song": "Re-hype" }
+    ]
+  },
   "111700": {
     "title": "Stationhead Live Stream Archive #1 2025-04",
     "tour": "Ready to Rock Release",
