@@ -88,9 +88,12 @@
     "tour": "Christmas stream",
     "venue": "Grand Oriental Minato-mirai",
     "date": "2021-12-06",
-    "notes": "04:00 run time",
+    "notes": "04:05 run time",
     "setlist": [
-        { "time": "00:00", "song": "ONLINE ACOUSTIC" }
+      { "time": "00:00", "song": "Entrance" },
+      { "time": "00:39", "song": "Blooper 1" },
+      { "time": "01:41", "song": "Bloopers 2,3,4" }
+      { "time": "03:11", "song": "Wrap up" }
     ],
     "previous": "64750",
     "next": "78288"
@@ -186,7 +189,7 @@
             { "time": "04:32", "song": "Akane shoots hoops" },
             { "time": "04:58", "song": "Back to the MV" },
             { "time": "09:44", "song": "Watching dancers" },
-            { "time": "09:44", "song": "Wrap up" }
+            { "time": "10:28", "song": "Wrap up" }
         ],
         "previous": "110497",
         "next": "117891"
