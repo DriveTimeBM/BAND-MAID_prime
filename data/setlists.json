@@ -1,17 +1,77 @@
 {
-    "57915": {
-        "title": "Making of May 10, 2021 *THE DAY OF MAID*",
-        "tour": "livestream",
-        "venue": "harevutai",
-        "date": "2021-05-10",
-        "notes": "02:24 run time",
-        "setlist": [
-            { "time": "00:00", "song": "cluppo" },
-            { "time": "01:33", "song": "BAND-MAID" }
-        ],
-        "next": "64750"
-      },
-      "64750": {
+  "107868": {
+    "title": "BAND-MAID YEAR END PARTY 2024 part 1",
+    "tour": "2024",
+    "venue": "N/A",
+    "date": "2024-12-28",
+    "notes": "24:58 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Intro and 2024 review" },
+        { "time": "10:03", "song": "Bestie, Mikey-chan" },
+        { "time": "18:01", "song": "Warning-chan" },
+        { "time": "20:49", "song": "MISA signature bass" },
+        { "time": "22:45", "song": "Hall Tour" }
+    ],
+    "next": "107867"
+  },
+  "107867": {
+    "title": "BAND-MAID YEAR END PARTY 2024 part 2",
+    "tour": "2024",
+    "venue": "N/A",
+    "date": "2024-12-28",
+    "notes": "27:25 run time",
+    "setlist": [
+        { "time": "00:00", "song": "July festivals" },
+        { "time": "05:36", "song": "The Akane incident" },
+        { "time": "09:41", "song": "Epic Narratives" },
+        { "time": "11:17", "song": "Spin-off okyuji" },
+        { "time": "14:05", "song": "Zepp Tour" },
+        { "time": "16:54", "song": "Kanami signature" },
+        { "time": "22:00", "song": "Individual thoughts for 2025" }
+    ],
+    "previous": "107868",
+    "next": "108532"
+  },
+  "108532": {
+    "title": "BAND-MAID NEW YEAR PARTY 2025 part 1",
+    "tour": "2025",
+    "venue": "N/A",
+    "date": "2025-01-01",
+    "notes": "25:28 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Intro and food" },
+        { "time": "09:25", "song": "2025 plans" },
+        { "time": "18:11", "song": "BAND-MAID TOUR 2025" }
+    ],
+    "previous": "107867",
+    "next": "108533"
+  },
+  "108533": {
+    "title": "BAND-MAID NEW YEAR PARTY 2025 part 2",
+    "tour": "2025",
+    "venue": "N/A",
+    "date": "2025-01-01",
+    "notes": "24:22 run time",
+    "setlist": [
+        { "time": "00:00", "song": "2025 Expectations" },
+        { "time": "09:00", "song": "One kanji" },
+        { "time": "22:34", "song": "Wrap up" }
+    ],
+    "previous": "108532"
+  },
+  "57915": {
+    "title": "Making of May 10, 2021 *THE DAY OF MAID*",
+    "tour": "livestream",
+    "venue": "harevutai",
+    "date": "2021-05-10",
+    "notes": "02:24 run time",
+    "setlist": [
+        { "time": "00:00", "song": "cluppo" },
+        { "time": "01:33", "song": "BAND-MAID" }
+    ],
+    "next": "64750"
+  },
+"64750": {
         "title": "Making of Sense OMV",
         "tour": "Sense single",
         "venue": "Shinkiba Garden Factory Studio",
