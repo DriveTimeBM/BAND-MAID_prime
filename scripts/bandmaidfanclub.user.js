@@ -128,7 +128,7 @@ document.body.appendChild(wrapper);
 // ✅ Wait for overlay to finish expanding before positioning search box
 let lastHeight = 0;
 const tryPosition = () => {
-  const overlay = document.querySelector('#bandmaid-summary-box');
+  const overlay = document.querySelector('fanclub-summary-box');
   if (!overlay) return;
 
   const rect = overlay.getBoundingClientRect();
@@ -205,11 +205,11 @@ tryPosition();
     // Create the overlay
     const renderSummary = (data, setlists) => {
       // 💥 Always remove any existing overlay first
-      const existing = document.querySelector('#bandmaid-summary-box');
+      const existing = document.querySelector('fanclub-summary-box');
       if (existing) existing.remove();
 
       const container = document.createElement('div');
-      container.id = 'bandmaid-summary-box';
+      container.id = 'fanclub-summary-box';
       container.style.marginTop = '20px';
       container.style.padding = '12px 16px';
       container.style.border = '2px solid #f2a2c0';
