@@ -71,13 +71,13 @@ async function loadFanClubData() {
  */
 async function createSearchBox(container) {
   // Avoid duplicates
-  if (document.querySelector('#bandmaid-search-box')) return;
+  if (document.querySelector('#fanclub-search-box')) return;
 
   // Wait for overlay to actually render
   await new Promise(resolve => setTimeout(resolve, 300));
 
   const wrapper = document.createElement('div');
-  wrapper.id = 'bandmaid-search-box';
+  wrapper.id = 'fanclub-search-box';
   wrapper.style.margin = '15px 0 25px 0';
   wrapper.style.textAlign = 'left';
   wrapper.style.fontFamily = 'monospace';
@@ -119,7 +119,7 @@ async function createSearchBox(container) {
   // ** Insertion block **
 
 // ✅ Always visible: appended to body and positioned *below* overlay
-if (document.querySelector('#bandmaid-search-box')) return;
+if (document.querySelector('#fanclub-search-box')) return;
 
 document.body.appendChild(wrapper);
 
