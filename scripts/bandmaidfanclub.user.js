@@ -43,24 +43,24 @@
 // 🔍 SEARCH FUNCTIONS
 // =====================
 
-// URL of your Prime data JSON
-const PRIME_JSON_URL = 'https://drivetimebm.github.io/BAND-MAID_gpt/fanclub/fanclub.json';
+// URL of your FanClub data JSON
+const FANCLUB_JSON_URL = 'https://drivetimebm.github.io/BAND-MAID_gpt/fanclub/fanclub.json';
 
-let primeDataCache = null;
+let fanclubDataCache = null;
 
 /**
- * Loads the prime.json file and caches it.
+ * Loads the fanclub.json file and caches it.
  */
-async function loadPrimeData() {
-  if (primeDataCache) return primeDataCache;
+async function loadFanClubData() {
+  if (fanclubDataCache) return fanclubDataCache;
 
   try {
-    const res = await fetch(PRIME_JSON_URL);
-    primeDataCache = await res.json();
-    console.info('Loaded Prime JSON:', primeDataCache.length, 'entries');
-    return primeDataCache;
+    const res = await fetch(FANCLUB_JSON_URL);
+    fanclubDataCache = await res.json();
+    console.info('Loaded FanClub JSON:', fanclubDataCache.length, 'entries');
+    return fanclubDataCache;
   } catch (err) {
-    console.error('Failed to load prime.json:', err);
+    console.error('Failed to load fanclub.json:', err);
     return [];
   }
 }
@@ -84,7 +84,7 @@ async function createSearchBox(container) {
 
   const input = document.createElement('input');
   input.type = 'text';
-  input.placeholder = '🔍 Search BAND-MAID Prime (e.g., BTS, DAY OF MAID)...';
+  input.placeholder = '🔍 Search BAND-MAID Fan Club (e.g., BTS, DAY OF MAID)...';
   input.style.width = '100%';
   input.style.padding = '8px 10px';
   input.style.border = '1px solid #ccc';
@@ -177,7 +177,7 @@ tryPosition();
 
     if (!query) return;
 
-    const data = await loadPrimeData();
+    const data = await loadFanClubData();
     const matches = data.filter(entry =>
       (entry.Title && entry.Title.toLowerCase().includes(query)) ||
       (entry.Category && entry.Category.toLowerCase().includes(query))
@@ -248,11 +248,11 @@ tryPosition();
           html += `<div style="margin-top:16px;">`;
           if (data.previous) {
             const prev = setlists[data.previous];
-            html += `<a href="https://bandmaidprime.tokyo/movies/${data.previous}" style="margin-right:12px; color:#333; text-decoration:none; background:#f9d5e2; padding:6px 10px; border-radius:8px;">⬅️ Prev: ${prev ? prev.title.replace(/\[OKYUJI\]\s*/,'') : 'Part -'}</a><br><br>`;
+            html += `<a href="https://bandmaid.tokyo/movies/${data.previous}" style="margin-right:12px; color:#333; text-decoration:none; background:#f9d5e2; padding:6px 10px; border-radius:8px;">⬅️ Prev: ${prev ? prev.title.replace(/\[OKYUJI\]\s*/,'') : 'Part -'}</a><br><br>`;
           }
           if (data.next) {
             const next = setlists[data.next];
-            html += `<a href="https://bandmaidprime.tokyo/movies/${data.next}" style="color:#333; text-decoration:none; background:#f9d5e2; padding:6px 10px; border-radius:8px;">Next: ${next ? next.title.replace(/\[OKYUJI\]\s*/,'') : 'Part +' } ➡️</a>`;
+            html += `<a href="https://bandmaid.tokyo/movies/${data.next}" style="color:#333; text-decoration:none; background:#f9d5e2; padding:6px 10px; border-radius:8px;">Next: ${next ? next.title.replace(/\[OKYUJI\]\s*/,'') : 'Part +' } ➡️</a>`;
           }
           html += `</div>`;
         }
