@@ -1,4 +1,24 @@
 {
+  "86512": {
+    "title": "[SPECIAL TALK] BAND-MAID *THE DAY OF MAID 2022*",
+    "tour": "Pre-US/US Tour 2022",
+    "venue": "rehearsal studio",
+    "date": "2022-05-10",
+    "notes": "40:26 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Intro" },
+        { "time": "02:17", "song": "Merch" },
+        { "time": "03:40", "song": "Pre-US Okyuji" },
+        { "time": "06:54", "song": "Van driving story" },
+        { "time": "13:23", "song": "US Tour" },
+        { "time": "20:00", "song": "Maid Day presents" },
+        { "time": "27:34", "song": "DOMINATION" },
+        { "time": "32:35", "song": "Promo video" },
+        { "time": "33:14", "song": "New EP [Unleash]" },
+        { "time": "37:20", "song": "TGT announced" }
+    ],
+    "next": "111700"
+  },
   "58887": {
     "title": "Super Lazy Time from BAND-MAID ONLINE OKYU-JI",
     "tour": "livestream",
