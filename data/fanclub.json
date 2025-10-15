@@ -119,7 +119,7 @@
     "next": "39976"
   },
   "39976": {
-    "title": "1 Kobato's Movie Recommendation #1",
+    "title": "1 Kobato's Movie Recommendations #1",
     "venue": "MAID'S ROOM",
     "date": "2020-05-16",
     "notes": "02:24 run time",
@@ -129,6 +129,66 @@
     "previous": "53951",
     "translation": "39976",
     "next": "40815"
+  },
+  "40815": {
+    "title": "2 Kobato's Movie Recommendations #2",
+    "venue": "MAID'S ROOM",
+    "date": "2020-06-09",
+    "notes": "05:38 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Kobato" }
+    ],
+    "previous": "39976",
+    "translation": "40815",
+    "next": "42145"
+  },
+  "42145": {
+    "title": "3 Kobato’s Movie Recommendations #3",
+    "venue": "MAID'S ROOM",
+    "date": "2020-07-25",
+    "notes": "07:24 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Kobato" }
+    ],
+    "previous": "40815",
+    "translation": "42145",
+    "next": "42144"
+  },
+  "42144": {
+    "title": "4 Kobato’s Movie Recommendations #4",
+    "venue": "MAID'S ROOM",
+    "date": "2020-09-11",
+    "notes": "04:16 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Kobato" }
+    ],
+    "previous": "42145",
+    "translation": "42144",
+    "next": "44568"
+  },
+  "44568": {
+    "title": "5 Kobato’s Movie Recommendations #5",
+    "venue": "MAID'S ROOM",
+    "date": "2020-10-21",
+    "notes": "05:04 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Kobato" }
+    ],
+    "previous": "42144",
+    "translation": "44568",
+    "next": "50978"
+  },
+  "50978": {
+    "title": "6 Kobato’s Movie Recommendations #6",
+    "venue": "MAID'S ROOM",
+    "date": "2021-03-15",
+    "notes": "08:44 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Kobato" }
+    ],
+    "previous": "44568",
+    "translation": "50978",
+    "next": "39875"
   },
 
   "61370": {
