@@ -55,7 +55,68 @@
         { "time": "00:00", "song": "Akane & MISA" }
     ],
     "previous": "44641",
-    "translation": "53842"
+    "translation": "53842",
+    "next": "39977"
+  },
+  "39977": {
+    "title": "1 Kanami Hand-Drip Coffee",
+    "venue": "MAID'S ROOM",
+    "date": "2020-04-30",
+    "notes": "03:37 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Kanami" }
+    ],
+    "previous": "53842",
+    "translation": "39977",
+    "next": "40813"
+  },
+  "40813": {
+    "title": "2 Kanami Homemade Banana Cake",
+    "venue": "MAID'S ROOM",
+    "date": "2020-06-21",
+    "notes": "02:13 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Kanami" }
+    ],
+    "previous": "39977",
+    "translation": "40813",
+    "next": "42143"
+  },
+  "42143": {
+    "title": "3 Kanami Talking About Saiki",
+    "venue": "MAID'S ROOM",
+    "date": "2020-08-09",
+    "notes": "04:03 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Kanami" }
+    ],
+    "previous": "40813",
+    "translation": "42143",
+    "next": "44575"
+  },
+  "44575": {
+    "title": "4 Kanami Looking Back on Precious Memories",
+    "venue": "MAID'S ROOM",
+    "date": "2020-09-30",
+    "notes": "07:58 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Kanami" }
+    ],
+    "previous": "42143",
+    "translation": "44575",
+    "next": "53951"
+  },
+  "53951": {
+    "title": "5 Kanami Looking Back on 2016",
+    "venue": "MAID'S ROOM",
+    "date": "2020-09-30",
+    "notes": "13:52 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Kanami" }
+    ],
+    "previous": "44575",
+    "translation": "53951",
+    "next": ""
   },
 
   "61370": {
