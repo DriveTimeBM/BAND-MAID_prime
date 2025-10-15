@@ -1,26 +1,63 @@
 {
   "40811": {
-    "title": "【メイドの部屋】AKANE①",
+    "title": "1 Akane’s Anime Talk",
     "venue": "MAID'S ROOM",
     "date": "2020-05-08",
     "notes": "06:27 run time",
     "setlist": [
-        { "time": "00:00", "song": "AKANE" }
+        { "time": "00:00", "song": "Akane" }
     ],
     "next": "40812",
     "translation": "40811"
   },  
   "40812": {
-    "title": "【メイドの部屋】AKANE②",
+    "title": "2 Akane’s Figure Collection",
     "venue": "MAID'S ROOM",
     "date": "2020-08-21",
     "notes": "05:45 run time",
     "setlist": [
-        { "time": "00:00", "song": "AKANE" }
+        { "time": "00:00", "song": "Akane" }
     ],
     "previous": "40811",
+    "next": "42146",
     "translation": "40812"
-  },   
+  },
+  "42146": {
+    "title": "3 Akane’s Figure Collection pt 2",
+    "venue": "MAID'S ROOM",
+    "date": "2020-09-02",
+    "notes": "06:05 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Akane" }
+    ],
+    "previous": "40812",
+    "next": "44641",
+    "translation": "42146"
+  },
+  "44641": {
+    "title": "4 Akane's Favorite Scent Items",
+    "venue": "MAID'S ROOM",
+    "date": "2020-11-01",
+    "notes": "07:16 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Akane" }
+    ],
+    "previous": "42146",
+    "next": "53842",
+    "translation": "44641"
+  },
+  "53842": {
+    "title": "5 Akane & MISA’s Summer Festival Vlog",
+    "venue": "MAID'S ROOM",
+    "date": "2021-03-19",
+    "notes": "06:38 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Akane & MISA" }
+    ],
+    "previous": "40811",
+    "translation": "53842"
+  },
+
   "61370": {
     "title": "One-on-one talk vol.1 KOBATO × SAIKI",
     "venue": "office",
