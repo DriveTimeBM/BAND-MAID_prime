@@ -255,7 +255,7 @@ tryPosition();
             html += `<a href="https://bandmaid.tokyo/movies/${data.next}" style="color:#333; text-decoration:none; background:#f9d5e2; padding:6px 10px; border-radius:8px;">Next: ${next ? next.title.replace(/\[OKYUJI\]\s*/,'') : 'Part +' } ➡️</a>`;
           }
           if (data.translation) {
-            html += `<a href="https://drivetimebm.github.io/BAND-MAID_prime/Translations/${data.translation}.txt" target="_blank" style="color:#333; text-decoration:none; background:#f9d5e2; padding:6px 10px; border-radius:8px;">English Translation: 🔠</a>`;
+            html += `<br><a href="https://drivetimebm.github.io/BAND-MAID_prime/Translations/${data.translation}.txt" target="_blank" style="color:#f09; border:2px solid #f09; text-decoration:none; padding:5px 9px; border-radius:8px; background:transparent; display:inline-block; margin-top:6px;">English Translation: 🔠</a>`;
           }
           html += `</div>`;
         }
