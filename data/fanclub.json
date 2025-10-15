@@ -1,4 +1,26 @@
 {
+  "40811": {
+    "title": "【メイドの部屋】AKANE①",
+    "venue": "MAID'S ROOM",
+    "date": "2020-05-08",
+    "notes": "06:27 run time",
+    "translation": "40811",
+    "setlist": [
+        { "time": "00:00", "song": "AKANE" }
+    ],
+    "next": "40812"
+  },  
+  "40812": {
+    "title": "【メイドの部屋】AKANE②",
+    "venue": "MAID'S ROOM",
+    "date": "2020-08-21",
+    "notes": "06:27 run time",
+    "translation": "40812",
+    "setlist": [
+        { "time": "00:00", "song": "AKANE" }
+    ],
+    "previous": "40811"
+  },   
   "61370": {
     "title": "One-on-one talk vol.1 KOBATO × SAIKI",
     "venue": "office",
