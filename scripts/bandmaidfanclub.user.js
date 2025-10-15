@@ -202,6 +202,31 @@ tryPosition();
 
     // ** end SEARCH **
 
+    function isFanClubMember() {
+      // Normalize text for comparison
+      const title = document.title.trim().toUpperCase();
+    
+      // 1. Title check
+      if (title.startsWith("MEMBER'S ONLY")) {
+        return false;
+      }
+    
+      // 2. Visible heading check
+      const restricted = Array.from(document.querySelectorAll("h1, h2, .page-title"))
+        .some(el => el.textContent.trim().toUpperCase().includes("MEMBER'S ONLY"));
+    
+      if (restricted) return false;
+    
+      // 3. No video iframe or player present (extra fallback)
+      if (!document.querySelector("iframe, video")) {
+        return false;
+      }
+    
+      // If none of the above matched, assume the user is logged in
+      return true;
+    }
+    
+
     // Create the overlay
     const renderSummary = (data, setlists) => {
       // 💥 Always remove any existing overlay first
@@ -254,7 +279,7 @@ tryPosition();
             const next = setlists[data.next];
             html += `<a href="https://bandmaid.tokyo/movies/${data.next}" style="color:#333; text-decoration:none; background:#f9d5e2; padding:6px 10px; border-radius:8px;">Next: ${next ? next.title.replace(/\[OKYUJI\]\s*/,'') : 'Part +' } ➡️</a>`;
           }
-          if (data.translation) {
+          if (isFanClubMember() && data.translation) {
             html += `<br><a href="https://drivetimebm.github.io/BAND-MAID_prime/Translations/${data.translation}.txt" target="_blank" style="color:#f09; border:2px solid #f09; text-decoration:none; padding:5px 9px; border-radius:8px; background:transparent; display:inline-block; margin-top:6px;">English Translation: 🔠</a>`;
           }
           html += `</div>`;
