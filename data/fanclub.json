@@ -7,7 +7,8 @@
     "setlist": [
         { "time": "00:00", "song": "AKANE" }
     ],
-    "next": "40812"
+    "next": "40812",
+    "translation": "40811"
   },  
   "40812": {
     "title": "【メイドの部屋】AKANE②",
@@ -17,7 +18,8 @@
     "setlist": [
         { "time": "00:00", "song": "AKANE" }
     ],
-    "previous": "40811"
+    "previous": "40811",
+    "translation": "40812"
   },   
   "61370": {
     "title": "One-on-one talk vol.1 KOBATO × SAIKI",
