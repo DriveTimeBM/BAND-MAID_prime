@@ -116,7 +116,19 @@
     ],
     "previous": "44575",
     "translation": "53951",
-    "next": ""
+    "next": "39976"
+  },
+  "39976": {
+    "title": "1 Kobato's Movie Recommendation #1",
+    "venue": "MAID'S ROOM",
+    "date": "2020-05-16",
+    "notes": "02:24 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Kobato" }
+    ],
+    "previous": "53951",
+    "translation": "39976",
+    "next": "40815"
   },
 
   "61370": {
