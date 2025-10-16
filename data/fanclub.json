@@ -190,7 +190,149 @@
     "translation": "50978",
     "next": "39875"
   },
-
+  "39875": {
+    "title": "1 MISA’s Snack Time #1",
+    "venue": "MAID'S ROOM",
+    "date": "2020-04-19",
+    "notes": "02:11 run time",
+    "setlist": [
+        { "time": "00:00", "song": "MISA" }
+    ],
+    "previous": "50978",
+    "translation": "39875",
+    "next": "42348"
+  },
+  "42348": {
+    "title": "2 MISA Plays Bass",
+    "venue": "MAID'S ROOM",
+    "date": "2020-06-21",
+    "notes": "01:53 run time",
+    "setlist": [
+        { "time": "00:00", "song": "MISA" }
+    ],
+    "previous": "39875",
+    "translation": "42348",
+    "next": "42349"
+  },
+  "42349": {
+    "title": "3 MISA's Fretless Bass",
+    "venue": "MAID'S ROOM",
+    "date": "2020-06-30",
+    "notes": "04:03 run time",
+    "setlist": [
+        { "time": "00:00", "song": "MISA" }
+    ],
+    "previous": "42348",
+    "translation": "42349",
+    "next": "44562"
+  },
+  "44562": {
+    "title": "4 MISA Pick to Slap Technique",
+    "venue": "MAID'S ROOM",
+    "date": "2020-09-03",
+    "notes": "04:49 run time",
+    "setlist": [
+        { "time": "00:00", "song": "MISA" }
+    ],
+    "previous": "42349",
+    "translation": "44562",
+    "next": "45977"
+  },
+  "45977": {
+    "title": "5 MISA Karaage Cooking",
+    "venue": "MAID'S ROOM",
+    "date": "2020-11-10",
+    "notes": "04:49 run time",
+    "setlist": [
+        { "time": "00:00", "song": "MISA" }
+    ],
+    "previous": "44562",
+    "translation": "45977",
+    "next": "53845"
+  },
+  "53845": {
+    "title": "6 MISA Fashion Gorilla",
+    "venue": "MAID'S ROOM",
+    "date": "2021-03-18",
+    "notes": "07:21 run time",
+    "setlist": [
+        { "time": "00:00", "song": "MISA" }
+    ],
+    "previous": "45977",
+    "translation": "53845",
+    "next": "39978"
+  },
+  "39978": {
+    "title": "1 Saiki Fire Red Jordans",
+    "venue": "MAID'S ROOM",
+    "date": "2020-04-25",
+    "notes": "04:52 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Saiki" }
+    ],
+    "previous": "53845",
+    "translation": "39978",
+    "next": "40814"
+  },
+  "40814": {
+    "title": "2 Saiki Stranger Things Sneakers",
+    "venue": "MAID'S ROOM",
+    "date": "2020-05-31",
+    "notes": "06:26 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Saiki" }
+    ],
+    "previous": "39978",
+    "translation": "40814",
+    "next": "42350"
+  },
+  "42350": {
+    "title": "3 Saiki Air Max 95",
+    "venue": "MAID'S ROOM",
+    "date": "2020-07-25",
+    "notes": "05:30 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Saiki" }
+    ],
+    "previous": "40814",
+    "translation": "42350",
+    "next": "42351"
+  },
+  "42351": {
+    "title": "4 Saiki Tokyo Maze",
+    "venue": "MAID'S ROOM",
+    "date": "2020-11-19",
+    "notes": "03:52 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Saiki" }
+    ],
+    "previous": "42350",
+    "translation": "42351",
+    "next": "45978"
+  },
+  "45978": {
+    "title": "5 Saiki Special Field AF1",
+    "venue": "MAID'S ROOM",
+    "date": "2020-11-19",
+    "notes": "05:10 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Saiki" }
+    ],
+    "previous": "42351",
+    "translation": "45978",
+    "next": "50977"
+  },
+  "50977": {
+    "title": "6 Saiki Gift from the Band",
+    "venue": "MAID'S ROOM",
+    "date": "2021-03-24",
+    "notes": "04:33 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Saiki" }
+    ],
+    "previous": "45978",
+    "translation": "50977"
+  },
   "61370": {
     "title": "One-on-one talk vol.1 KOBATO × SAIKI",
     "venue": "office",
