@@ -580,8 +580,6 @@
     ],
     "previous": "108514"
   },
-
-
   "26036": {
     "title": "Making of Bubble OMV",
     "tour": "Bubble single",
@@ -595,7 +593,8 @@
         { "time": "05:51", "song": "Sunglasses" },
         { "time": "07:40", "song": "Wrap up" }
     ],
-    "next": "28606"
+    "next": "28606",
+    "translation": "26036"
   },
   "28606": {
     "title": "Making of Gion-cho OMV Day 1",
@@ -608,7 +607,8 @@
         { "time": "05:07", "song": "Happy Birthday" }
     ],
     "previous": "26036",
-    "next": "28751"
+    "next": "28751",
+    "translation": "28606"
   },
   "28751": {
     "title": "Making of Gion-cho OMV Day 2",
@@ -621,7 +621,8 @@
         { "time": "01:58", "song": "Wrap up" }
     ],
     "previous": "28606",
-    "next": "32068"
+    "next": "32068",
+    "translation": "28751"
   },
   "32068": {
     "title": "Making of Endless story OMV",
@@ -639,7 +640,8 @@
         { "time": "10:00", "song": "Wrap up" }
     ],
     "previous": "28751",
-    "next": "34561"
+    "next": "34561",
+    "translation": "32068"
   },
   "34561": {
     "title": "Making of 輪廻 [Rinne] OMV",
@@ -654,7 +656,8 @@
         { "time": "04:50", "song": "Saiki" }
     ],
     "previous": "32068",
-    "next": "38729"
+    "next": "38729",
+    "translation": "34561"
   },
   "38729": {
     "title": "Making of The Dragon Cries OMV",
@@ -668,7 +671,8 @@
         { "time": "02:52", "song": "Wrap up" }
     ],
     "previous": "34561",
-    "next": "51459"
+    "next": "51459",
+    "translation": "38729"
   },
   "51459": {
     "title": "Making of Different OMV",
@@ -682,7 +686,8 @@
         { "time": "03:15", "song": "Wrap up" }
     ],
     "previous": "38729",
-    "next": "51468"
+    "next": "51468",
+    "translation": "51459"
   },
   "51468": {
     "title": "Making of Manners OMV",
@@ -700,7 +705,8 @@
         { "time": "07:22", "song": "Saiki" }
     ],
     "previous": "51459",
-    "next": "52180"
+    "next": "52180",
+    "translation": "51468"
   },
   "52180": {
     "title": "Making of Warning! OMV",
@@ -716,7 +722,8 @@
         { "time": "06:10", "song": "Wrap up" }
     ],
     "previous": "51468",
-    "next": "53035"
+    "next": "53035",
+    "translation": "52180"
   },
   "53035": {
     "title": "Making of After Life OMV",
@@ -736,7 +743,8 @@
         { "time": "07:18", "song": "Saiki" }
     ],
     "previous": "52180",
-    "next": "57913"
+    "next": "57913",
+    "translation": "53035"
   },
   "57913": {
     "title": "Making of May 10, 2021 *THE DAY OF MAID*",
