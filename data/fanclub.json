@@ -1,4 +1,102 @@
 {
+  "39016": {
+    "title": "BAND-MAID Live Broadcast",
+    "venue": "MAID'S ROOM",
+    "date": "2020-03-04",
+    "notes": "19:52 run time",
+    "setlist": [
+      { "time": "00:00", "song": "Rinne [輪廻]" },
+      { "time": "03:25", "song": "Blooming" },
+      { "time": "07:20", "song": "Screaming" },
+      { "time": "11:30", "song": "REAL EXISTENCE" },
+      { "time": "15:48", "song": "DOMINATION" },
+      { "time": "", "song": "" }
+    ],
+    "next": "39945"
+  },  
+  "39945": {
+    "title": "First Impressions",
+    "venue": "RADIO FOR O-MEI-SYU-SAMA",
+    "date": "2020-04-18",
+    "notes": "32:50 run time",
+    "setlist": [
+      { "time": "00:00", "song": "Group chat" }
+    ],
+    "previous": "39016",
+    "next": "40518",
+    "translation": "39945"
+  },  
+  "40518": {
+    "title": "Favorite Moments from LCS Show",
+    "venue": "RADIO FOR O-MEI-SYU-SAMA",
+    "date": "2020-04-30",
+    "notes": "29:36 run time",
+    "setlist": [
+      { "time": "00:00", "song": "Group chat" }
+    ],
+    "previous": "39945",
+    "next": "42347",
+    "translation": "40518"
+  },  
+  "42347": {
+    "title": "When We Were Kids",
+    "venue": "RADIO FOR O-MEI-SYU-SAMA",
+    "date": "2020-06-12",
+    "notes": "24:30 run time",
+    "setlist": [
+      { "time": "00:00", "song": "Group chat" }
+    ],
+    "previous": "40518",
+    "next": "50243",
+    "translation": "42347"
+  },  
+  "50243": {
+    "title": "Drunk Stories Special",
+    "venue": "RADIO FOR O-MEI-SYU-SAMA",
+    "date": "2020-12-26",
+    "notes": "21:39 run time",
+    "setlist": [
+      { "time": "00:00", "song": "Group chat" }
+    ],
+    "previous": "42347",
+    "next": "50244",
+    "translation": "50243"
+  },  
+  "50244": {
+    "title": "*Different* Release Celebration",
+    "venue": "RADIO FOR O-MEI-SYU-SAMA",
+    "date": "2020-12-30",
+    "notes": "22:57 run time",
+    "setlist": [
+      { "time": "00:00", "song": "Group chat" }
+    ],
+    "previous": "50243",
+    "next": "57853",
+    "translation": "50244"
+  },  
+  "57853": {
+    "title": "Cooking Talk Special",
+    "venue": "RADIO FOR O-MEI-SYU-SAMA",
+    "date": "2021-06-15",
+    "notes": "12:28 run time",
+    "setlist": [
+      { "time": "00:00", "song": "Group chat" }
+    ],
+    "previous": "50244",
+    "next": "59898",
+    "translation": "57853"
+  },  
+  "59898": {
+    "title": "Drinking Stories, Part 2",
+    "venue": "RADIO FOR O-MEI-SYU-SAMA",
+    "date": "2021-08-01",
+    "notes": "21:39 run time",
+    "setlist": [
+      { "time": "00:00", "song": "Group chat" }
+    ],
+    "previous": "57853",
+    "translation": "59898"
+  },  
   "40811": {
     "title": "1 Akane’s Anime Talk",
     "venue": "MAID'S ROOM",
