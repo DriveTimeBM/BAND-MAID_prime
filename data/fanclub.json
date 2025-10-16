@@ -341,7 +341,8 @@
     "setlist": [
         { "time": "00:00", "song": "KOBATO × SAIKI" }
     ],
-    "next": "62285"
+    "next": "62285",
+    "translation": "61370"
   },
   "62285": {
     "title": "One-on-one talk vol.2 KANAMI × MISA",
@@ -352,7 +353,8 @@
       { "time": "00:00", "song": "KANAMI × MISA" }
     ],
     "previous": "61370",
-    "next": "64272"
+    "next": "64272",
+    "translation": "62285"
   },
   "64272": {
     "title": "One-on-one talk vol.3 AKANE × SAIKI",
@@ -363,7 +365,8 @@
       { "time": "00:00", "song": "AKANE × SAIKI" }
     ],
     "previous": "62285",
-    "next": "68568"
+    "next": "68568",
+    "translation": "64272"
   },
   "68568": {
     "title": "One-on-one talk vol.4 KANAMI x SAIKI",
@@ -374,7 +377,8 @@
       { "time": "00:00", "song": "KANAMI x SAIKI" }
     ],
     "previous": "64272",
-    "next": "71957"
+    "next": "71957",
+    "translation": "68568"
   },
   "71957": {
     "title": "One-on-one talk vol.5 AKANE x KOBATO",
@@ -384,7 +388,8 @@
     "setlist": [
       { "time": "00:00", "song": "AKANE x KOBATO" }
     ],
-    "previous": "68568"
+    "previous": "68568",
+    "translation": "71957"
   },
   "58868": {
     "title": "Super Lazy Time from BAND-MAID ONLINE OKYU-JI",
