@@ -1,22 +1,21 @@
 // ==UserScript==
-// @name         BAND-MAID FanClub Video Helper (MV3 Compatible)
+// @name         BAND-MAID FanClub Video Helper (Stable Debug Build)
 // @namespace    https://bandmaid.tokyo/
-// @version      1.3
-// @description  Displays video titles, categories, and translation links from JSON for BAND-MAID Fan Club videos
+// @version      1.5
+// @description  Displays video titles, categories, and translation links for BAND-MAID Fan Club videos from GitHub JSON
 // @author       DriveTimeBM
 // @match        https://bandmaid.tokyo/movies/*
 // @match        https://www.bandmaid.tokyo/movies/*
 // @run-at       document-end
 // @grant        none
 // @connect      drivetimebm.github.io
-// @connect      raw.githubusercontent.com
 // ==/UserScript==
 
 (function () {
   'use strict';
 
   // -----------------------------------------------------------------------
-  // CONFIG
+  // CONFIGURATION
   // -----------------------------------------------------------------------
 
   const FANCLUB_JSON_URL =
@@ -35,7 +34,6 @@
   }
 
   function isFanClubMember() {
-    // Detect MEMBER'S ONLY marker
     if (document.title.toUpperCase().startsWith("MEMBER'S ONLY")) return false;
     const heading = document.querySelector('h1, h2, .page-title');
     if (heading && heading.textContent.toUpperCase().includes("MEMBER'S ONLY"))
@@ -45,18 +43,15 @@
   }
 
   async function loadFanClubData() {
+    console.log('[BAND-MAID] Fetching JSON from GitHub...');
     try {
-      // short MV3 delay to keep worker alive
-      await new Promise(r => setTimeout(r, 250));
-
       const res = await fetch(FANCLUB_JSON_URL, { mode: 'cors' });
-      if (!res.ok) throw new Error(res.statusText);
-
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const json = await res.json();
-      console.log(`[BAND-MAID] Loaded fanclub.json (${Object.keys(json).length} items)`);
+      console.log('[BAND-MAID] JSON loaded:', Object.keys(json).length, 'entries');
       return json;
     } catch (err) {
-      console.error('[BAND-MAID] Failed to load fanclub.json:', err);
+      console.error('[BAND-MAID] JSON fetch error:', err);
       return {};
     }
   }
@@ -75,26 +70,26 @@
   }
 
   // -----------------------------------------------------------------------
-  // MAIN DISPLAY
+  // MAIN FUNCTION
   // -----------------------------------------------------------------------
 
   async function init() {
-    console.log('[BAND-MAID] Initializing script...');
-
+    console.log('[BAND-MAID] init start');
     const videoId = getVideoId();
-    if (!videoId) {
-      console.warn('[BAND-MAID] No videoId detected in URL');
-      return;
-    }
+    console.log('[BAND-MAID] videoId =', videoId);
+    if (!videoId) return;
 
     const data = await loadFanClubData();
+    console.log('[BAND-MAID] data keys count:', Object.keys(data).length);
+
     const entry = data[videoId];
     if (!entry) {
-      console.warn('[BAND-MAID] No entry found for video', videoId);
+      console.warn('[BAND-MAID] No entry found for', videoId);
       return;
     }
+    console.log('[BAND-MAID] entry found:', entry.title);
 
-    // Build info box
+    // Create display box
     const box = document.createElement('div');
     box.style.cssText = `
       background:#fff;
@@ -124,7 +119,7 @@
       html += `</div>`;
     }
 
-    // Translation link logic
+    // Translation link
     if (isFanClubMember() && entry.translation) {
       html += createLinkButton(
         'English Translation 🔠',
@@ -133,27 +128,24 @@
         '#e83e8c'
       );
     } else if (!isFanClubMember() && entry.translation) {
-      html += `<p style="margin-top:8px; color:#666; font-style:italic;">Translation available for members only 🔒</p>`;
+      html += `<p style="margin-top:8px; color:#666; font-style:italic;">
+                 Translation available for members only 🔒
+               </p>`;
     }
 
     box.innerHTML = html;
 
-    // Insert box at top of body
+    // Insert at top of page
     document.body.insertBefore(box, document.body.firstChild);
     console.log('[BAND-MAID] Info box inserted');
   }
 
   // -----------------------------------------------------------------------
-  // INITIALIZE SAFELY (MV3 FIX)
+  // ENTRY POINT — EXECUTE AFTER FULL PAGE LOAD
   // -----------------------------------------------------------------------
 
-  window.addEventListener('DOMContentLoaded', async () => {
-    try {
-      await new Promise(r => setTimeout(r, 250)); // small MV3 delay
-      await init();
-      console.log('[BAND-MAID] Initialized successfully');
-    } catch (err) {
-      console.error('[BAND-MAID] Fatal init error:', err);
-    }
+  window.addEventListener('load', () => {
+    console.log('[BAND-MAID] Script loaded, calling init()');
+    init().catch(e => console.error('[BAND-MAID] init() failed:', e));
   });
 })();
