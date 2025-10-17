@@ -1,7 +1,7 @@
 {
 
   "39444":  {
-    "title":  "2020.04.06 【お盟主様への声】MESSAGE FROM AKANE ①",
+    "title":  "MESSAGE FROM AKANE 1",
     "venue":  "[MESSAGE FROM AKANE]",
     "date":  "2020-04-06",
     "notes":  "",
@@ -16,7 +16,7 @@
     "translation":  "39444"
 },
 "39739":  {
-    "title":  "2020.04.13 【お盟主様への声】MESSAGE FROM AKANE ②",
+    "title":  "MESSAGE FROM AKANE 2",
     "venue":  "[MESSAGE FROM AKANE]",
     "date":  "2020-04-13",
     "notes":  "",
@@ -31,7 +31,7 @@
     "translation":  "39739"
 },
 "40523":  {
-    "title":  "2020.05.31 【お盟主様への声】MESSAGE FROM AKANE ③",
+    "title":  "MESSAGE FROM AKANE 3",
     "venue":  "[MESSAGE FROM AKANE]",
     "date":  "2020-05-31",
     "notes":  "",
@@ -46,7 +46,7 @@
     "translation":  "40523"
 },
 "42601":  {
-    "title":  "2020.08.09 【お盟主様への声】MESSAGE FROM AKANE ④",
+    "title":  "MESSAGE FROM AKANE 4",
     "venue":  "[MESSAGE FROM AKANE]",
     "date":  "2020-08-09",
     "notes":  "",
@@ -61,7 +61,7 @@
     "translation":  "42601"
 },
 "42757":  {
-    "title":  "2020.09.30 【お盟主様への声】MESSAGE FROM AKANE ⑤",
+    "title":  "MESSAGE FROM AKANE 5",
     "venue":  "[MESSAGE FROM AKANE]",
     "date":  "2020-09-30",
     "notes":  "",
@@ -76,7 +76,7 @@
     "translation":  "42757"
 },
 "42755":  {
-    "title":  "2020.10.15 【お盟主様への声】MESSAGE FROM AKANE ⑥",
+    "title":  "MESSAGE FROM AKANE 6",
     "venue":  "[MESSAGE FROM AKANE]",
     "date":  "2020-10-15",
     "notes":  "",
@@ -91,7 +91,7 @@
     "translation":  "42755"
 },
 "51609":  {
-    "title":  "2021.02.17 【お盟主様への声】MESSAGE FROM AKANE ⑦",
+    "title":  "MESSAGE FROM AKANE 7",
     "venue":  "[MESSAGE FROM AKANE]",
     "date":  "2021-02-17",
     "notes":  "",
@@ -106,7 +106,7 @@
     "translation":  "51609"
 },
 "51608":  {
-    "title":  "2021.02.21 【お盟主様への声】MESSAGE FROM AKANE ⑧",
+    "title":  "MESSAGE FROM AKANE 8",
     "venue":  "[MESSAGE FROM AKANE]",
     "date":  "2021-02-21",
     "notes":  "",
@@ -121,7 +121,7 @@
     "translation":  "51608"
 },
 "51610":  {
-    "title":  "2021.02.24 【お盟主様への声】MESSAGE FROM AKANE ⑨",
+    "title":  "MESSAGE FROM AKANE 9",
     "venue":  "[MESSAGE FROM AKANE]",
     "date":  "2021-02-24",
     "notes":  "",
@@ -136,7 +136,7 @@
     "translation":  "51610"
 },
 "56390":  {
-    "title":  "2021.05.20 【お盟主様への声】MESSAGE FROM AKANE ⑩",
+    "title":  "MESSAGE FROM AKANE 10",
     "venue":  "[MESSAGE FROM AKANE]",
     "date":  "2021-05-20",
     "notes":  "",
@@ -151,7 +151,7 @@
     "translation":  "56390"
 },
 "39443":  {
-    "title":  "2020.04.06 【お盟主様への声】MESSAGE FROM KANAMI ①",
+    "title":  "MESSAGE FROM Kanami 1",
     "venue":  "[MESSAGE FROM KANAMI]",
     "date":  "2020-04-06",
     "notes":  "",
@@ -166,7 +166,7 @@
     "translation":  "39443"
 },
 "40253":  {
-    "title":  "2020.04.25 【お盟主様への声】MESSAGE FROM KANAMI ②",
+    "title":  "MESSAGE FROM Kanami 2",
     "venue":  "[MESSAGE FROM KANAMI]",
     "date":  "2020-04-25",
     "notes":  "",
@@ -181,7 +181,7 @@
     "translation":  "40253"
 },
 "40524":  {
-    "title":  "2020.05.16 【お盟主様への声】ENGLISH MESSAGE FROM KANAMI",
+    "title":  "English MESSAGE FROM Kanami",
     "venue":  "[MESSAGE FROM KANAMI]",
     "date":  "2020-05-16",
     "notes":  "",
@@ -192,11 +192,10 @@
                     }
                 ],
     "previous":  "40253",
-    "next":  "42604",
-    "translation":  "40524"
+    "next":  "42604"
 },
 "42604":  {
-    "title":  "2020.06.21 【お盟主様への声】MESSAGE FROM KANAMI ③",
+    "title":  "MESSAGE FROM Kanami 3",
     "venue":  "[MESSAGE FROM KANAMI]",
     "date":  "2020-06-21",
     "notes":  "",
@@ -211,7 +210,7 @@
     "translation":  "42604"
 },
 "42600":  {
-    "title":  "2020.09.14 【お盟主様への声】MESSAGE FROM KANAMI ④",
+    "title":  "MESSAGE FROM Kanami 4",
     "venue":  "[MESSAGE FROM KANAMI]",
     "date":  "2020-09-14",
     "notes":  "",
@@ -226,7 +225,7 @@
     "translation":  "42600"
 },
 "42606":  {
-    "title":  "2020.09.22 【お盟主様への声】MESSAGE FROM KANAMI ⑤",
+    "title":  "MESSAGE FROM Kanami 5",
     "venue":  "[MESSAGE FROM KANAMI]",
     "date":  "2020-09-22",
     "notes":  "",
@@ -241,7 +240,7 @@
     "translation":  "42606"
 },
 "42605":  {
-    "title":  "2020.10.15 【お盟主様への声】MESSAGE FROM KANAMI ⑥",
+    "title":  "MESSAGE FROM Kanami 6",
     "venue":  "[MESSAGE FROM KANAMI]",
     "date":  "2020-10-15",
     "notes":  "",
@@ -256,7 +255,7 @@
     "translation":  "42605"
 },
 "51612":  {
-    "title":  "2021.02.16 【お盟主様への声】MESSAGE FROM KANAMI ⑦",
+    "title":  "MESSAGE FROM Kanami 7",
     "venue":  "[MESSAGE FROM KANAMI]",
     "date":  "2021-02-16",
     "notes":  "",
@@ -271,7 +270,7 @@
     "translation":  "51612"
 },
 "51611":  {
-    "title":  "2021.02.19 【お盟主様への声】MESSAGE FROM KANAMI ⑧",
+    "title":  "MESSAGE FROM Kanami 8",
     "venue":  "[MESSAGE FROM KANAMI]",
     "date":  "2021-02-19",
     "notes":  "",
@@ -286,7 +285,7 @@
     "translation":  "51611"
 },
 "51613":  {
-    "title":  "2021.02.23 【お盟主様への声】MESSAGE FROM KANAMI ⑨",
+    "title":  "MESSAGE FROM Kanami 9",
     "venue":  "[MESSAGE FROM KANAMI]",
     "date":  "2021-02-23",
     "notes":  "",
@@ -301,7 +300,7 @@
     "translation":  "51613"
 },
 "56481":  {
-    "title":  "2021.05.24 【お盟主様への声】MESSAGE FROM KANAMI ⑩",
+    "title":  "MESSAGE FROM Kanami 10",
     "venue":  "[MESSAGE FROM KANAMI]",
     "date":  "2021-05-24",
     "notes":  "",
@@ -327,8 +326,7 @@
                     }
                 ],
     "previous":  "56481",
-    "next":  "97504",
-    "translation":  "97506"
+    "next":  "97504"
 },
 "97504":  {
     "title":  "Message in English from KANAMI",
@@ -342,8 +340,7 @@
                     }
                 ],
     "previous":  "97506",
-    "next":  "39442",
-    "translation":  "97504"
+    "next":  "39442"
 },
 "39442":  {
     "title":  "2020.04.06 【お盟主様への声】MESSAGE FROM MIKU ①",
