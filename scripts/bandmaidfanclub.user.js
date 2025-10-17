@@ -1,330 +1,135 @@
 // ==UserScript==
-// @name         BAND-MAID FanClub Video Describer (with Timestamps & Navigation)
+// @name         BAND-MAID FanClub Video Helper (MV3 Compatible)
 // @namespace    https://bandmaid.tokyo/
-// @version      1.0
-// @description  Show video info with timestamps and next/previous part links from external JSON
+// @version      1.2
+// @description  Displays video titles, categories, and translation links from JSON for BAND-MAID Fan Club videos
 // @author       DriveTimeBM
 // @match        https://bandmaid.tokyo/movies/*
-// @grant        GM_xmlhttpRequest
+// @run-at       document-end
+// @grant        none
+// @connect      drivetimebm.github.io
 // @connect      raw.githubusercontent.com
 // ==/UserScript==
 
-(function() {
-    'use strict';
-  
-    const GITHUB_JSON_URL =
-      'https://raw.githubusercontent.com/DriveTimeBM/BAND-MAID_prime/main/data/fanclub.json';
-  
-    // Extract numeric video ID from URL
-    const getVideoId = () => {
-      const match = window.location.pathname.match(/movies\/(\d+)/);
-      return match ? match[1] : null;
-    };
-  
-    // Fetch JSON from GitHub
-    const loadSetlists = () =>
-      new Promise((resolve, reject) => {
-        GM_xmlhttpRequest({
-          method: 'GET',
-          url: GITHUB_JSON_URL,
-          onload: res => {
-            try {
-              resolve(JSON.parse(res.responseText));
-            } catch (e) {
-              reject(e);
-            }
-          },
-          onerror: reject
-        });
-      });
-  
-    // ** SEARCH **
-// =====================
-// 🔍 SEARCH FUNCTIONS
-// =====================
+(async function () {
+  'use strict';
 
-// URL of your FanClub data JSON
-const FANCLUB_JSON_URL = 'https://drivetimebm.github.io/BAND-MAID_gpt/fanclub/fanclub.json';
+  // ---- CONFIG -------------------------------------------------------------
 
-let fanclubDataCache = null;
+  // Public JSON source hosted on GitHub Pages
+  const FANCLUB_JSON_URL =
+    'https://drivetimebm.github.io/BAND-MAID_gpt/fanclub/fanclub.json';
 
-/**
- * Loads the fanclub.json file and caches it.
- */
-async function loadFanClubData() {
-  if (fanclubDataCache) return fanclubDataCache;
+  // Optional translation base
+  const TRANSLATION_BASE =
+    'https://drivetimebm.github.io/BAND-MAID_prime/translations/';
 
-  try {
-    const res = await fetch(FANCLUB_JSON_URL);
-    fanclubDataCache = await res.json();
-    console.info('Loaded FanClub JSON:', fanclubDataCache.length, 'entries');
-    return fanclubDataCache;
-  } catch (err) {
-    console.error('Failed to load fanclub.json:', err);
-    return [];
-  }
-}
+  // ---- UTILITIES ----------------------------------------------------------
 
-/**
- * Creates and injects the search box above or below your overlay.
- * @param {HTMLElement} container The overlay container element.
- */
-async function createSearchBox(container) {
-  // Avoid duplicates
-  if (document.querySelector('#fanclub-search-box')) return;
-
-  // Wait for overlay to actually render
-  await new Promise(resolve => setTimeout(resolve, 300));
-
-  const wrapper = document.createElement('div');
-  wrapper.id = 'fanclub-search-box';
-  wrapper.style.margin = '15px 0 25px 0';
-  wrapper.style.textAlign = 'left';
-  wrapper.style.fontFamily = 'monospace';
-
-  const input = document.createElement('input');
-  input.type = 'text';
-  input.placeholder = '🔍 Search BAND-MAID Fan Club (e.g., BTS, DAY OF MAID)...';
-  input.style.width = '100%';
-  input.style.padding = '8px 10px';
-  input.style.border = '1px solid #ccc';
-  input.style.borderRadius = '8px';
-  input.style.fontSize = '14px';
-  input.style.boxSizing = 'border-box';
-  input.style.background = '#fffafc';
-  input.style.color = '#333';              // dark gray readable text
-  input.style.backgroundColor = '#fff';    // solid white background
-  
-  input.addEventListener('focus', () => {
-    input.style.outline = 'none';
-    input.style.boxShadow = '0 0 4px #f2a2c0';
-  });
-  input.addEventListener('blur', () => {
-    input.style.boxShadow = 'none';
-  });
-  
-
-  const resultsBox = document.createElement('div');
-  resultsBox.style.marginTop = '10px';
-  resultsBox.style.fontSize = '14px';
-  resultsBox.style.lineHeight = '1.5';
-  resultsBox.style.maxHeight = '200px';
-  resultsBox.style.overflowY = 'auto';
-  resultsBox.style.borderTop = '1px solid #eee';
-  resultsBox.style.paddingTop = '10px';
-
-  wrapper.appendChild(input);
-  wrapper.appendChild(resultsBox);
-
-  // ** Insertion block **
-
-// ✅ Always visible: appended to body and positioned *below* overlay
-if (document.querySelector('#fanclub-search-box')) return;
-
-document.body.appendChild(wrapper);
-
-document.body.appendChild(wrapper);
-
-// ✅ Wait for overlay to finish expanding before positioning search box
-let lastHeight = 0;
-const tryPosition = () => {
-  const overlay = document.querySelector('fanclub-summary-box');
-  if (!overlay) return;
-
-  const rect = overlay.getBoundingClientRect();
-  if (rect.height !== lastHeight) {
-    lastHeight = rect.height;
-    // Keep checking until height stops changing
-    setTimeout(tryPosition, 300);
-    return;
+  function getVideoId() {
+    const m = location.pathname.match(/movies\/(\d+)/);
+    return m ? m[1] : null;
   }
 
-  // Once stable, position the search box
-  const topOffset = window.scrollY + rect.bottom + 0; // adjust spacing here
-  const leftOffset = rect.left;
-  //const width = rect.width;
-  const width = 300;
+  function isFanClubMember() {
+    // Detect MEMBER'S ONLY marker
+    if (document.title.toUpperCase().startsWith("MEMBER'S ONLY")) return false;
+    const heading = document.querySelector('h1, h2, .page-title');
+    if (heading && heading.textContent.toUpperCase().includes("MEMBER'S ONLY"))
+      return false;
+    if (!document.querySelector('iframe, video')) return false;
+    return true;
+  }
 
-  Object.assign(wrapper.style, {
-    position: 'absolute',
-    left: `${leftOffset}px`,
-    top: `${topOffset}px`,
-    width: `${width}px`,
-    zIndex: 9999,
-    background: '#fffafc',
-    border: '2px solid #f2a2c0',
-    borderRadius: '12px',
-    padding: '12px 16px',
-    boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
-  });
-};
+  async function loadFanClubData() {
+    try {
+      const res = await fetch(FANCLUB_JSON_URL, { mode: 'cors' });
+      if (!res.ok) throw new Error(res.statusText);
+      const json = await res.json();
+      console.log(`[BAND-MAID] Loaded fanclub.json (${Object.keys(json).length} items)`);
+      return json;
+    } catch (err) {
+      console.error('[BAND-MAID] Failed to load fanclub.json:', err);
+      return {};
+    }
+  }
 
-// Start checking right away
-tryPosition();
+  function createLinkButton(label, href, color = '#333', bg = '#f9d5e2') {
+    const style = `
+      color:${color};
+      text-decoration:none;
+      background:${bg};
+      padding:6px 10px;
+      border-radius:8px;
+      display:inline-block;
+      margin:4px;
+    `;
+    return `<a href="${href}" target="_blank" style="${style}">${label}</a>`;
+  }
 
+  // ---- MAIN DISPLAY -------------------------------------------------------
 
-
-// *END Insertion block
-  
-  // Add spacing so it never overlaps site header
-  wrapper.style.marginTop = '40px';
-  
-
-  // --- Search behavior ---
-  input.addEventListener('input', async e => {
-    const query = e.target.value.trim().toLowerCase();
-    resultsBox.innerHTML = '';
-
-    if (!query) return;
+  async function init() {
+    const videoId = getVideoId();
+    if (!videoId) return;
 
     const data = await loadFanClubData();
-    const matches = data.filter(entry =>
-      (entry.Title && entry.Title.toLowerCase().includes(query)) ||
-      (entry.Category && entry.Category.toLowerCase().includes(query))
-    );
-
-    if (!matches.length) {
-      resultsBox.innerHTML = `<div style="color:#888;">No matches found.</div>`;
+    const entry = data[videoId];
+    if (!entry) {
+      console.warn('[BAND-MAID] No data found for video', videoId);
       return;
     }
 
-    resultsBox.innerHTML = matches
-      .map(entry => {
-        const title = entry.Title || '(No Title)';
-        const cat = entry.Category ? `<span style="color:#999;">[${entry.Category}]</span> ` : '';
-        const url = entry.URL || entry.Link || '#';
-        return `<div style="margin-bottom:6px;"><a href="${url}" target="_blank" style="text-decoration:none; color:#d12d6d;">${cat}${title}</a></div>`;
-      })
-      .join('');
-  });
-}
+    // Create container
+    const box = document.createElement('div');
+    box.style.cssText = `
+      background:#fff;
+      border:2px solid #f09;
+      border-radius:10px;
+      padding:10px 14px;
+      margin:10px auto;
+      max-width:680px;
+      font-family:Segoe UI, Roboto, sans-serif;
+      font-size:14px;
+      line-height:1.5;
+      color:#222;
+    `;
 
+    let html = `<h2 style="margin-top:0;color:#f09;">${entry.title}</h2>`;
+    html += `<p><strong>Category:</strong> ${entry.venue || ''}</p>`;
+    html += `<p><strong>Date:</strong> ${entry.date || ''}</p>`;
 
-    // ** end SEARCH **
-
-    function isFanClubMember() {
-      // Normalize text for comparison
-      const title = document.title.trim().toUpperCase();
-    
-      // 1. Title check
-      if (title.startsWith("MEMBER'S ONLY")) {
-        return false;
-      }
-    
-      // 2. Visible heading check
-      const restricted = Array.from(document.querySelectorAll("h1, h2, .page-title"))
-        .some(el => el.textContent.trim().toUpperCase().includes("MEMBER'S ONLY"));
-    
-      if (restricted) return false;
-    
-      // 3. No video iframe or player present (extra fallback)
-      if (!document.querySelector("iframe, video")) {
-        return false;
-      }
-    
-      // If none of the above matched, assume the user is logged in
-      return true;
+    // Previous / Next
+    if (entry.previous || entry.next) {
+      html += `<div style="margin-top:6px;">`;
+      if (entry.previous)
+        html += createLinkButton('⬅️ Previous', `https://bandmaid.tokyo/movies/${entry.previous}`);
+      if (entry.next)
+        html += createLinkButton('Next ➡️', `https://bandmaid.tokyo/movies/${entry.next}`);
+      html += `</div>`;
     }
-    
 
-    // Create the overlay
-    const renderSummary = (data, setlists) => {
-      // 💥 Always remove any existing overlay first
-      const existing = document.querySelector('fanclub-summary-box');
-      if (existing) existing.remove();
+    // Translation link (only if user is logged in)
+    if (isFanClubMember() && entry.translation) {
+      html += createLinkButton(
+        'English Translation 🔠',
+        `${TRANSLATION_BASE}${entry.translation}.txt`,
+        '#fff',
+        '#e83e8c'
+      );
+    } else if (!isFanClubMember() && entry.translation) {
+      html += `<p style="margin-top:8px; color:#666; font-style:italic;">Translation available for members only 🔒</p>`;
+    }
 
-      const container = document.createElement('div');
-      container.id = 'fanclub-summary-box';
-      container.style.marginTop = '20px';
-      container.style.padding = '12px 16px';
-      container.style.border = '2px solid #f2a2c0';
-      container.style.borderRadius = '12px';
-      container.style.backgroundColor = '#fffafc';
-      container.style.fontFamily = 'monospace';
-      container.style.lineHeight = '1.5';
-        
-      //let html = '<div style="height:120px;"></div>'; // spacer to push lower
-      let html = '<br><br><br><br>'; // spacer to push lower
-  
-      if (data) {
-        html += `<strong>🎸 Supplemental Information 🎸</strong><br><br>`;
-        html += `<strong>Title:</strong> ${data.title}<br>`;
-        if (data.tour) html += `<strong>Tour:</strong> ${data.tour}<br>`;
-        if (data.venue) html += `<strong>Venue:</strong> ${data.venue}<br>`;
-        if (data.date) html += `<strong>Date:</strong> ${data.date}<br>`;
-        if (data.notes) html += `<strong>Notes:</strong> ${data.notes}<br><br>`;
-  
-        if (data.setlist && data.setlist.length) {
-          html += `<strong>Contents:</strong><br><ol style="margin-top:4px;">`;
-          for (const entry of data.setlist) {
-            if (entry.time) {
-              const [min, sec] = entry.time.split(':').map(Number);
-              const seconds = min * 60 + sec;
-              html += `<li><a href="#t=${seconds}" style="color:#d12d6d; text-decoration:none;">[${entry.time}]</a> ${entry.song}</li>`;
-            } else {
-              html += `<li>${entry.song}</li>`;
-            }
-          }
-          html += `</ol><br>`;
-        }
-  
-        // Navigation buttons
-        if (data.previous || data.next || data.translation) {
-          html += `<div style="margin-top:16px;">`;
-          if (data.previous) {
-            const prev = setlists[data.previous];
-            html += `<a href="https://bandmaid.tokyo/movies/${data.previous}" style="margin-right:12px; color:#333; text-decoration:none; background:#f9d5e2; padding:6px 10px; border-radius:8px;">⬅️ Prev: ${prev ? prev.title.replace(/\[OKYUJI\]\s*/,'') : 'Part -'}</a><br><br>`;
-          }
-          if (data.next) {
-            const next = setlists[data.next];
-            html += `<a href="https://bandmaid.tokyo/movies/${data.next}" style="color:#333; text-decoration:none; background:#f9d5e2; padding:6px 10px; border-radius:8px;">Next: ${next ? next.title.replace(/\[OKYUJI\]\s*/,'') : 'Part +' } ➡️</a>`;
-          }
-          if (isFanClubMember() && data.translation) {
-            html += `<br><a href="https://drivetimebm.github.io/BAND-MAID_prime/Translations/${data.translation}.txt" target="_blank" style="color:#f09; border:2px solid #f09; text-decoration:none; padding:5px 9px; border-radius:8px; background:transparent; display:inline-block; margin-top:6px;">English Translation: 🔠</a>`;
-          }
-          html += `</div>`;
-        }
-      } else {
-        html += '<br>';
-      }
-  
-      const div = document.createElement('div');
-      div.innerHTML = html;
-  
-      const titleElement = document.querySelector('h1, .movie-title');
-      if (titleElement) titleElement.insertAdjacentElement('afterend', div);
-  
-      // ** SEARCH **
-      createSearchBox(container);
+    box.innerHTML = html;
+    document.body.insertBefore(box, document.body.firstChild);
+  }
 
+  // ---- INIT AFTER PAGE LOAD ----------------------------------------------
 
-      // Timestamp jump
-      div.addEventListener('click', e => {
-        if (e.target.tagName === 'A' && e.target.href.includes('#t=')) {
-          e.preventDefault();
-          const seconds = Number(e.target.href.split('#t=')[1]);
-          const video = document.querySelector('video');
-          if (video) {
-            video.currentTime = seconds;
-            video.play();
-          } else {
-            window.location.hash = `t=${seconds}`;
-          }
-        }
-      });
-    };
-  
-    // Main
-    window.addEventListener('load', async () => {
-      const videoId = getVideoId();
-      if (!videoId) return;
-  
-      try {
-        const setlists = await loadSetlists();
-        renderSummary(setlists[videoId], setlists);
-      } catch (err) {
-        console.error('Failed to load BAND-MAID setlists:', err);
-      }
-    });
-  })();
-  
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    init();
+  } else {
+    window.addEventListener('DOMContentLoaded', init);
+  }
+})();
