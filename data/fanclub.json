@@ -1,14 +1,14 @@
 {
 
     "43816":  {
-        "title":  "2020.07.16 Voice Message Akane",
-        "venue":  "[VOICE MESSAGE Akane]",
+        "title":  "2020.07.16 Q & A Akane",
+        "venue":  "[Q & A Akane]",
         "date":  "2020-07-16",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "Akane"
                         }
                     ],
         "previous":  "50977",
@@ -16,14 +16,14 @@
         "translation":  "43816"
     },
 "44563":  {
-        "title":  "2020.08.21 Voice Message Akane 2",
-        "venue":  "[VOICE MESSAGE Akane]",
+        "title":  "2020.08.21 Q & A Akane 2",
+        "venue":  "[Q & A Akane]",
         "date":  "2020-08-21",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "Akane"
                         }
                     ],
         "previous":  "43816",
@@ -31,14 +31,14 @@
         "translation":  "44563"
     },
 "48479":  {
-        "title":  "2020.11.10 Voice Message Akane 3",
-        "venue":  "[VOICE MESSAGE Akane]",
+        "title":  "2020.11.10 Q & A Akane 3",
+        "venue":  "[Q & A Akane]",
         "date":  "2020-11-10",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "Akane"
                         }
                     ],
         "previous":  "44563",
@@ -46,14 +46,14 @@
         "translation":  "48479"
     },
 "48480":  {
-        "title":  "2020.11.17 Voice Message Akane 4",
-        "venue":  "[VOICE MESSAGE Akane]",
+        "title":  "2020.11.17 Q & A Akane 4",
+        "venue":  "[Q & A Akane]",
         "date":  "2020-11-17",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "Akane"
                         }
                     ],
         "previous":  "48479",
@@ -61,14 +61,14 @@
         "translation":  "48480"
     },
 "43815":  {
-        "title":  "2020.07.16 Voice Message Kanami",
-        "venue":  "[VOICE MESSAGE Kanami]",
+        "title":  "2020.07.16 Q & A Kanami",
+        "venue":  "[Q & A Kanami]",
         "date":  "2020-07-16",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "Kanami"
                         }
                     ],
         "previous":  "48480",
@@ -76,14 +76,14 @@
         "translation":  "43815"
     },
 "44564":  {
-        "title":  "2020.08.21 Voice Message Kanami 2",
-        "venue":  "[VOICE MESSAGE Kanami]",
+        "title":  "2020.08.21 Q & A Kanami 2",
+        "venue":  "[Q & A Kanami]",
         "date":  "2020-08-21",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "Kanami"
                         }
                     ],
         "previous":  "43815",
@@ -91,14 +91,14 @@
         "translation":  "44564"
     },
 "44570":  {
-        "title":  "2020.11.10 Voice Message Kanami 3",
-        "venue":  "[VOICE MESSAGE Kanami]",
+        "title":  "2020.11.10 Q & A Kanami 3",
+        "venue":  "[Q & A Kanami]",
         "date":  "2020-11-10",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "Kanami"
                         }
                     ],
         "previous":  "44564",
@@ -106,29 +106,28 @@
         "translation":  "44570"
     },
 "48481":  {
-        "title":  "2020.11.17 Voice Message Kanami 4",
-        "venue":  "[VOICE MESSAGE Kanami]",
+        "title":  "2020.11.17 (English) Q & A Kanami 4",
+        "venue":  "[Q & A Kanami]",
         "date":  "2020-11-17",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "Kanami (English)"
                         }
                     ],
         "previous":  "44570",
-        "next":  "43814",
-        "translation":  "48481"
+        "next":  "43814"
     },
 "43814":  {
-        "title":  "2020.07.16 Voice Message Miku Kobato",
-        "venue":  "[VOICE MESSAGE Kobato]",
+        "title":  "2020.07.16 Q & A Miku Kobato",
+        "venue":  "[Q & A Kobato]",
         "date":  "2020-07-16",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "Kobato"
                         }
                     ],
         "previous":  "48481",
@@ -136,14 +135,14 @@
         "translation":  "43814"
     },
 "44565":  {
-        "title":  "2020.08.21 Voice Message Miku Kobato 2",
-        "venue":  "[VOICE MESSAGE Kobato]",
+        "title":  "2020.08.21 Q & A Miku Kobato 2",
+        "venue":  "[Q & A Kobato]",
         "date":  "2020-08-21",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "Kobato"
                         }
                     ],
         "previous":  "43814",
@@ -151,14 +150,14 @@
         "translation":  "44565"
     },
 "44571":  {
-        "title":  "2020.11.10 Voice Message Miku Kobato 3",
-        "venue":  "[VOICE MESSAGE Kobato]",
+        "title":  "2020.11.10 Q & A Miku Kobato 3",
+        "venue":  "[Q & A Kobato]",
         "date":  "2020-11-10",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "Kobato"
                         }
                     ],
         "previous":  "44565",
@@ -166,14 +165,14 @@
         "translation":  "44571"
     },
 "48483":  {
-        "title":  "2020.11.17 Voice Message Miku Kobato 4",
-        "venue":  "[VOICE MESSAGE Kobato]",
+        "title":  "2020.11.17 Q & A Miku Kobato 4",
+        "venue":  "[Q & A Kobato]",
         "date":  "2020-11-17",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "Kobato"
                         }
                     ],
         "previous":  "44571",
@@ -181,14 +180,14 @@
         "translation":  "48483"
     },
 "43813":  {
-        "title":  "2020.07.16 Voice Message MISA",
-        "venue":  "[VOICE MESSAGE MISA]",
+        "title":  "2020.07.16 Q & A MISA",
+        "venue":  "[Q & A MISA]",
         "date":  "2020-07-16",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "MISA"
                         }
                     ],
         "previous":  "48483",
@@ -196,14 +195,14 @@
         "translation":  "43813"
     },
 "44566":  {
-        "title":  "2020.08.21 Voice Message MISA 2",
-        "venue":  "[VOICE MESSAGE MISA]",
+        "title":  "2020.08.21 Q & A MISA 2",
+        "venue":  "[Q & A MISA]",
         "date":  "2020-08-21",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "MISA"
                         }
                     ],
         "previous":  "43813",
@@ -211,14 +210,14 @@
         "translation":  "44566"
     },
 "44572":  {
-        "title":  "2020.11.10 Voice Message MISA 3",
-        "venue":  "[VOICE MESSAGE MISA]",
+        "title":  "2020.11.10 Q & A MISA 3",
+        "venue":  "[Q & A MISA]",
         "date":  "2020-11-10",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "MISA"
                         }
                     ],
         "previous":  "44566",
@@ -226,14 +225,14 @@
         "translation":  "44572"
     },
 "48482":  {
-        "title":  "2020.11.17 Voice Message MISA4",
-        "venue":  "[VOICE MESSAGE MISA]",
+        "title":  "2020.11.17 Q & A MISA4",
+        "venue":  "[Q & A MISA]",
         "date":  "2020-11-17",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "MISA"
                         }
                     ],
         "previous":  "44572",
@@ -241,14 +240,14 @@
         "translation":  "48482"
     },
 "43734":  {
-        "title":  "2020.07.16 Voice Message Saiki",
-        "venue":  "[VOICE MESSAGE Saiki]",
+        "title":  "2020.07.16 Q & A Saiki",
+        "venue":  "[Q & A Saiki]",
         "date":  "2020-07-16",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "Saiki"
                         }
                     ],
         "previous":  "48482",
@@ -256,14 +255,14 @@
         "translation":  "43734"
     },
 "44567":  {
-        "title":  "2020.08.21 Voice Message Saiki 2",
-        "venue":  "[VOICE MESSAGE Saiki]",
+        "title":  "2020.08.21 Q & A Saiki 2",
+        "venue":  "[Q & A Saiki]",
         "date":  "2020-08-21",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "Saiki"
                         }
                     ],
         "previous":  "43734",
@@ -271,14 +270,14 @@
         "translation":  "44567"
     },
 "44574":  {
-        "title":  "2020.11.10 Voice Message Saiki 3",
-        "venue":  "[VOICE MESSAGE Saiki]",
+        "title":  "2020.11.10 Q & A Saiki 3",
+        "venue":  "[Q & A Saiki]",
         "date":  "2020-11-10",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "Saiki"
                         }
                     ],
         "previous":  "44567",
@@ -286,14 +285,14 @@
         "translation":  "44574"
     },
 "48478":  {
-        "title":  "2020.11.17 Voice Message Saiki 4",
-        "venue":  "[VOICE MESSAGE Saiki]",
+        "title":  "2020.11.17 Q & A Saiki 4",
+        "venue":  "[Q & A Saiki]",
         "date":  "2020-11-17",
         "notes":  "",
         "setlist":  [
                         {
                             "time":  "00:00",
-                            "song":  ""
+                            "song":  "Saiki"
                         }
                     ],
         "previous":  "44574",
