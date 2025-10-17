@@ -1,17 +1,47 @@
 {
 "22353":  {
-    "title":  "Welcome to OMEISYUSAMA-NO-KAI",
+    "title":  "Welcome to OMEISYUSAMA-NO-KAI Kobato",
     "venue":  "office",
     "date":  "2018-07-04",
     "notes":  "",
     "setlist":  [
                     {
                         "time":  "00:00",
-                        "song":  "OMEISYUSAMA-NO-KAI"
+                        "song":  "Welcome"
+                    }
+                ],
+    "next":  "22452",
+    "translation":  "22353"
+},
+"22452":  {
+    "title":  "Welcome to OMEISYUSAMA-NO-KAI Kanami",
+    "venue":  "office",
+    "date":  "2018-07-11",
+    "notes":  "",
+    "setlist":  [
+                    {
+                        "time":  "00:00",
+                        "song":  "Welcome"
+                    }
+                ],
+    "next":  "23714",
+    "previous": "22353",
+    "translation":  "22452"
+},
+"23714":  {
+    "title":  "Surprise!",
+    "venue":  "office",
+    "date":  "2018-10-03",
+    "notes":  "",
+    "setlist":  [
+                    {
+                        "time":  "00:00",
+                        "song":  "Surprise!"
                     }
                 ],
     "next":  "36524",
-    "translation":  "22353"
+    "previous": "22352",
+    "translation":  "23714"
 },
 "36524":  {
     "title":  "Akane Photographing Saiki",
@@ -25,7 +55,7 @@
                     }
                 ],
     "next":  "50361",
-    "previous": "22353",
+    "previous": "22452",
     "translation":  "36524"
 },
 "50361":  {
