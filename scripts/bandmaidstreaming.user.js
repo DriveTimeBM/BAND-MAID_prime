@@ -20,8 +20,8 @@
         searchContainer.id = 'bm-search-container';
         searchContainer.style.cssText = `
             position: fixed;
-            top: 40px;
-            right: 20px;
+            top: 50px;
+            right: 30px;
             z-index: 10000;
             background: white;
             border: 2px solid #333;
