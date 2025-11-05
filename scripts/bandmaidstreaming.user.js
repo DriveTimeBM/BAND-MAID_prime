@@ -20,16 +20,16 @@
         searchContainer.id = 'bm-search-container';
         searchContainer.style.cssText = `
             position: fixed;
-            top: 50px;
-            right: 30px;
+            top: 55px;
+            right: 20px;
             z-index: 10000;
             background: white;
             border: 2px solid #333;
-            border-radius: 8px;
-            padding: 15px;
+            border-radius: 4px;
+            padding: 10px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             min-width: 300px;
-            max-width: 500px;
+            max-width: 400px;
             max-height: 80vh;
             overflow-y: auto;
         `;
