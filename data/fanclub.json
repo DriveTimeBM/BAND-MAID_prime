@@ -1,9 +1,9 @@
 {
 "120833":  {
-        "title":  "Stationhead Live Stream Archive (Aug. 1, 2025)",
+        "title":  "Stationhead Live Stream Archive 1 (Aug. 1, 2025)",
         "venue":  "[Stationhead]",
         "date":  "2025-08-01",
-        "notes":  "15:45 run time",
+        "notes":  "#1 of 4 [15:45]",
         "setlist":  [
             { "time":  "00:00", "song":  "Intro" },
             { "time":  "02:10", "song":  "Akane's new friend" },
@@ -11,45 +11,48 @@
             { "time":  "08:35", "song":  "What is justice?" },
             { "time":  "11:35", "song":  "Tougen Anki" },
             { "time":  "12:36", "song":  "MV" },
-            { "time":  "13:55", "song":  "3 songs" }
+            { "time":  "13:55", "song":  "Akanes's song picks" }
         ],
         "previous":  "111710",
         "next":  "120834"
     },
 "120834":  {
-        "title":  "Stationhead Live Stream Archive (Aug. 15, 2025)",
+        "title":  "Stationhead Live Stream Archive 2 (Aug. 15, 2025)",
         "venue":  "[Stationhead]",
         "date":  "2025-08-15",
-        "notes":  "18:17 run time",
+        "notes":  "#2 of 4 [18:17]",
         "setlist":  [
             { "time":  "00:00", "song":  "Intro" },
             { "time":  "00:58", "song":  "Kanami's recent obsession " },
             { "time":  "04:00", "song":  "Hokkaido After Party" },
             { "time":  "09:20", "song":  "What is justice?" },
             { "time":  "14:10", "song":  "Tougen Anki" },
-            { "time":  "15:20", "song":  "Kanami's Song Picks" }
-                    ],
+            { "time":  "15:20", "song":  "Kanami's song picks" }
+        ],
         "previous":  "120833",
         "next":  "120835"
     },
 "120835":  {
-        "title":  "Stationhead Live Stream Archive (Aug. 29, 2025)",
+        "title":  "Stationhead Live Stream Archive 3 (Aug. 29, 2025)",
         "venue":  "[Stationhead]",
         "date":  "2025-08-29",
-        "notes":  "",
+        "notes":  "#3 of 4 [15:46]",
         "setlist":  [
-                        {
-                            "time":  "00:00", "song":  "Intro"
-                        }
-                    ],
-                    "previous":  "120834",
-                    "next":  "120836"
+            { "time":  "00:00", "song":  "Intro" },
+            { "time":  "01:00", "song":  "Sour food" },
+            { "time":  "09:30", "song":  "What is justice?" },
+            { "time":  "11:25", "song":  "Tougen Anki" },
+            { "time":  "12:55", "song":  "MV" },
+            { "time":  "14:00", "song":  "MISA's song picks" }
+        ],
+        "previous":  "120834",
+        "next":  "120836"
     },
 "120836":  {
-        "title":  "Stationhead Live Stream Archive (Sep. 12, 2025)",
+        "title":  "Stationhead Live Stream Archive 4 (Sep. 12, 2025)",
         "venue":  "[Stationhead]",
         "date":  "2025-09-12",
-        "notes":  "",
+        "notes":  "#4 of 4 [21:58]",
         "setlist":  [
                         {
                             "time":  "00:00", "song":  "Intro"

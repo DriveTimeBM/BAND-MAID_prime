@@ -1,9 +1,9 @@
 {
 "120823":  {
-        "title":  "Stationhead Live Stream Archive (Aug. 1, 2025)",
+        "title":  "Stationhead Live Stream Archive 1 (Aug. 1, 2025)",
         "venue":  "[Stationhead]",
         "date":  "2025-08-01",
-        "notes":  "15:45 run time",
+        "notes":  "#1 of 4 [15:45]",
         "setlist":  [
           { "time":  "00:00", "song":  "Intro" },
           { "time":  "02:10", "song":  "Akane's new friend" },
@@ -17,10 +17,10 @@
         "next":  "120824"
     },
 "120824":  {
-        "title":  "Stationhead Live Stream Archive (Aug. 15, 2025)",
+        "title":  "Stationhead Live Stream Archive 2 (Aug. 15, 2025)",
         "venue":  "[Stationhead]",
         "date":  "2025-08-15",
-        "notes":  "",
+        "notes":  "#2 of 4 [18:17]",
         "setlist":  [
           { "time":  "00:00", "song":  "Intro" },
           { "time":  "00:58", "song":  "Kanami's recent obsession " },
@@ -33,23 +33,26 @@
         "next":  "120825"
     },
 "120825":  {
-        "title":  "Stationhead Live Stream Archive (Aug. 29, 2025)",
+        "title":  "Stationhead Live Stream Archive 3 (Aug. 29, 2025)",
         "venue":  "[Stationhead]",
         "date":  "2025-08-29",
-        "notes":  "",
-        "setlist":  [
-                        {
-                            "time":  "00:00", "song":  "Intro"
-                        }
-                    ],
-                    "previous":  "120824",
-                    "next":  "120826"
+        "notes":  "#3 of 4 [15:46]",
+        "setlist":  [         
+            { "time":  "00:00", "song":  "Intro" },
+            { "time":  "01:00", "song":  "Sour food" },
+            { "time":  "09:30", "song":  "What is justice?" },
+            { "time":  "11:25", "song":  "Tougen Anki" },
+            { "time":  "12:55", "song":  "MV" },
+            { "time":  "14:00", "song":  "MISA's song picks" }
+          ],
+          "previous":  "120824",
+          "next":  "120826"
     },
 "120826":  {
-        "title":  "Stationhead Live Stream Archive (Sep. 12, 2025)",
+        "title":  "Stationhead Live Stream Archive 4 (Sep. 12, 2025)",
         "venue":  "[Stationhead]",
         "date":  "2025-09-12",
-        "notes":  "",
+        "notes":  "#4 of 4 [21:58]",
         "setlist":  [
                         {
                             "time":  "00:00", "song":  "Intro"
