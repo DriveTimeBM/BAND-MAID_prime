@@ -5,13 +5,13 @@
         "date":  "2025-08-01",
         "notes":  "15:45 run time",
         "setlist":  [
-                    { "time":  "00:00", "song":  "Intro" },
-                    { "time":  "02:10", "song":  "Akane's new friend" },
-                    { "time":  "06:06", "song":  "Tour" },
-                    { "time":  "08:35", "song":  "What is justice?" },
-                    { "time":  "11:35", "song":  "Tougen Anki" },
-                    { "time":  "12:36", "song":  "MV" },
-                    { "time":  "13:55", "song":  "3 songs" }
+            { "time":  "00:00", "song":  "Intro" },
+            { "time":  "02:10", "song":  "Akane's new friend" },
+            { "time":  "06:06", "song":  "Tour" },
+            { "time":  "08:35", "song":  "What is justice?" },
+            { "time":  "11:35", "song":  "Tougen Anki" },
+            { "time":  "12:36", "song":  "MV" },
+            { "time":  "13:55", "song":  "3 songs" }
         ],
         "previous":  "111710",
         "next":  "120834"
@@ -20,11 +20,14 @@
         "title":  "Stationhead Live Stream Archive (Aug. 15, 2025)",
         "venue":  "[Stationhead]",
         "date":  "2025-08-15",
-        "notes":  "",
+        "notes":  "18:17 run time",
         "setlist":  [
-                        {
-                            "time":  "00:00", "song":  "Intro"
-                        }
+            { "time":  "00:00", "song":  "Intro" },
+            { "time":  "00:58", "song":  "Kanami's recent obsession " },
+            { "time":  "04:00", "song":  "Hokkaido After Party" },
+            { "time":  "09:20", "song":  "What is justice?" },
+            { "time":  "14:10", "song":  "Tougen Anki" },
+            { "time":  "15:20", "song":  "Kanami's Song Picks" }
                     ],
         "previous":  "120833",
         "next":  "120835"

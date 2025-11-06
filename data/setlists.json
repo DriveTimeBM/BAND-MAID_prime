@@ -5,13 +5,13 @@
         "date":  "2025-08-01",
         "notes":  "15:45 run time",
         "setlist":  [
-                    { "time":  "00:00", "song":  "Intro" },
-                    { "time":  "02:10", "song":  "Akane's new friend" },
-                    { "time":  "06:06", "song":  "Tour" },
-                    { "time":  "08:35", "song":  "What is justice?" },
-                    { "time":  "11:35", "song":  "Tougen Anki" },
-                    { "time":  "12:36", "song":  "MV" },
-                    { "time":  "13:55", "song":  "3 songs" }
+          { "time":  "00:00", "song":  "Intro" },
+          { "time":  "02:10", "song":  "Akane's new friend" },
+          { "time":  "06:06", "song":  "Tour" },
+          { "time":  "08:35", "song":  "What is justice?" },
+          { "time":  "11:35", "song":  "Tougen Anki" },
+          { "time":  "12:36", "song":  "MV" },
+          { "time":  "13:55", "song":  "3 songs" }
         ],
         "previous":  "111700",
         "next":  "120824"
@@ -22,10 +22,13 @@
         "date":  "2025-08-15",
         "notes":  "",
         "setlist":  [
-                        {
-                            "time":  "00:00", "song":  "Intro"
-                        }
-                    ],
+          { "time":  "00:00", "song":  "Intro" },
+          { "time":  "00:58", "song":  "Kanami's recent obsession " },
+          { "time":  "04:00", "song":  "Hokkaido After Party" },
+          { "time":  "09:20", "song":  "What is justice?" },
+          { "time":  "14:10", "song":  "Tougen Anki" },
+          { "time":  "15:20", "song":  "Kanami's Song Picks" }
+      ],
         "previous":  "120823",
         "next":  "120825"
     },
