@@ -54,10 +54,13 @@
         "date":  "2025-09-12",
         "notes":  "#4 of 4 [21:58]",
         "setlist":  [
-                        {
-                            "time":  "00:00", "song":  "Intro"
-                        }
-                    ],
+            { "time":  "00:00", "song":  "Intro" },
+            { "time":  "00:54", "song":  "Saiki's current obsession" },
+            { "time":  "04:30", "song":  "Tour" },
+            { "time":  "09:57", "song":  "What is justice?" },
+            { "time":  "16:03", "song":  "MV" },
+            { "time":  "17:11", "song":  "Saiki's song picks" }
+        ],
         "previous":  "120835"
     },
 "56853":  {
