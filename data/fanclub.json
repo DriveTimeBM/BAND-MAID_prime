@@ -8,7 +8,8 @@
           { "time":  "00:00", "song":  "Intro" },
           { "time":  "00:58", "song":  "Present Perfect" },
           { "time":  "06:41", "song":  "Ready to Rock" }
-        ]
+        ],
+        "next": "122535"
     },
     "122535": {
         "title": "SCOOOOOP Self-Liner Notes part 2",
