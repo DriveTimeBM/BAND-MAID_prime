@@ -59,7 +59,75 @@
         "song": "Corallium"
       }
     ],
-    "previous": "122607"
+    "previous": "122607",
+    "next": "122806"
+  },
+  "122806": {
+    "title": "BAND-MAID PRE US OKYUJI in JAPAN SHIBUYA EGGMAN part 3",
+    "venue": "SHIBUYA EGGMAN",
+    "date": "2022-09-09",
+    "notes": "#3 of 4 [24:40]",
+    "setlist": [
+      {
+        "time": "00:00",
+        "song": "Sayonakidori"
+      },
+      {
+        "time": "04:59",
+        "song": "from now on"
+      },
+      {
+        "time": "08:52",
+        "song": "Manners"
+      },
+      {
+        "time": "13:10",
+        "song": "Hibana"
+      },
+      {
+        "time": "16:50",
+        "song": "Honkai"
+      },
+      {
+        "time": "20:39",
+        "song": "Choose me"
+      }
+    ],
+    "previous": "122608",
+    "next": "122807"
+  },
+  "122807": {
+    "title": "BAND-MAID PRE US OKYUJI in JAPAN SHIBUYA EGGMAN part 4",
+    "venue": "SHIBUYA EGGMAN",
+    "date": "2022-09-09",
+    "notes": "#4 of 4 [26:22]",
+    "setlist": [
+      {
+        "time": "00:10",
+        "song": "Unleash!!!!!"
+      },
+      {
+        "time": "03:35",
+        "song": "Different"
+      },
+      {
+        "time": "07:11",
+        "song": "Warning!"
+      },
+      {
+        "time": "11:33",
+        "song": "No God"
+      },
+      {
+        "time": "17:00",
+        "song": "DOMINATION"
+      },
+      {
+        "time": "21:36",
+        "song": "influencer"
+      }
+    ],
+    "previous": "122806"
   },
   "122523": {
     "title": "SCOOOOOP Self-Liner Notes part 1",
