@@ -721,7 +721,44 @@
         "song": "Wrap up"
       }
     ],
-    "previous": "108532"
+    "previous": "108532",
+    "next": "123156"
+  },
+  "123156": {
+    "title": "BAND-MAID YEAR END PARTY 2025 part 1",
+    "tour": "2025",
+    "venue": "N/A",
+    "date": "2025-12-30",
+    "notes": "24:24 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Kanpai" },
+        { "time": "02:45", "song": "Zen" },
+        { "time": "05:15", "song": "Spin-off okyuji" }
+        { "time": "10:06", "song": "Billboard Acoustic Tour" },
+        { "time": "14:00", "song": "Ready to Rock" },
+        { "time": "16:10", "song": "Arabaki" },
+        { "time": "19:40", "song": "2025 Tour Round 1" },
+        { "time": "22:40", "song": "Million Rock" }
+    ],
+    "previous": "108533",
+    "next": "123157"
+  },
+  "123157": {
+    "title": "BAND-MAID YEAR END PARTY 2025 part 2",
+    "tour": "2025",
+    "venue": "N/A",
+    "date": "2025-12-30",
+    "notes": "21:48 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Kobato trip to USA" },
+        { "time": "02:28", "song": "August festivals" },
+        { "time": "06:19", "song": "September - EP complete" },
+        { "time": "08:04", "song": "October - HYDE/SCOOOOOP" },
+        { "time": "13:30", "song": "Record Day" },
+        { "time": "14:55", "song": "December - TGT/Festivals" },
+        { "time": "18:54", "song": "Year end messages" }
+    ],
+    "previous": "123156"
   },
   "57915": {
     "title": "Making of May 10, 2021 *THE DAY OF MAID*",
