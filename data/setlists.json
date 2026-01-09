@@ -169,9 +169,30 @@
         "song": "SUPER SUNSHINE"
       }
     ],
-    "previous": "122523"
+    "previous": "122523",
+    "next": "122345"
   },
-  "120823": {
+  "122345": {
+    "title": "SCOOOOOP Self-Liner Notes part 3",
+    "venue": "[Office]",
+    "date": "2026-01-09",
+    "notes": "#3 of 4 [26:31]",
+    "setlist": [
+      {
+        "time": "00:00",
+        "song": "Intro"
+      },
+      {
+        "time": "00:22",
+        "song": "SION"
+      },
+      {
+        "time": "14:07",
+        "song": "Dilly-Dally"
+      }
+    ],
+    "previous": "122525"
+  },  "120823": {
     "title": "Stationhead Live Stream Archive 1 (Aug. 1, 2025)",
     "venue": "[Stationhead]",
     "date": "2025-08-01",
