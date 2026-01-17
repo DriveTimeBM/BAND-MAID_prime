@@ -779,7 +779,36 @@
         { "time": "14:55", "song": "December - TGT/Festivals" },
         { "time": "18:54", "song": "Year end messages" }
     ],
-    "previous": "123156"
+    "previous": "123156",
+    "next": "123801"
+  },
+  "123801": {
+    "title": "BAND-MAID NEW YEAR PARTY 2026 part 1",
+    "tour": "2026",
+    "venue": "N/A",
+    "date": "2026-01-17",
+    "notes": "23:26 run time",
+    "setlist": [
+        { "time": "00:00", "song": "Intro " },
+        { "time": "03:33", "song": "Spin-oof okyuji" },
+        { "time": "06:43", "song": "World Tour 2026" },
+        { "time": "09:29", "song": "Major label anniversary" },
+        { "time": "17:05", "song": "Look ahead at 2026" }
+    ],
+    "previous": "123157",
+    "next": "123802"
+  },
+  "123802": {
+    "title": "BAND-MAID NEW YEAR PARTY 2026 part 2",
+    "tour": "2026",
+    "venue": "N/A",
+    "date": "2026-01-17",
+    "notes": "15:51 run time",
+    "setlist": [
+        { "time": "00:00", "song": "One kanji" },
+        { "time": "15:33", "song": "Wrap up" }
+    ],
+    "previous": "123801"
   },
   "57915": {
     "title": "Making of May 10, 2021 *THE DAY OF MAID*",
