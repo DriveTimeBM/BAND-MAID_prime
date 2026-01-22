@@ -191,8 +191,31 @@
         "song": "Dilly-Dally"
       }
     ],
-    "previous": "122525"
-  },  "120823": {
+    "previous": "122525",
+    "next": "123702"
+  },  
+  "123702": {
+    "title": "SCOOOOOP Self-Liner Notes part 4",
+    "venue": "[Office]",
+    "date": "2026-01-22",
+    "notes": "#4 of 4 [25:08]",
+    "setlist": [
+      {
+        "time": "00:00",
+        "song": "Intro"
+      },
+      {
+        "time": "00:21",
+        "song": "Zen"
+      },
+      {
+        "time": "14:37",
+        "song": "Lock and Load"
+      }
+    ],
+    "previous": "123334"
+  },
+"120823": {
     "title": "Stationhead Live Stream Archive 1 (Aug. 1, 2025)",
     "venue": "[Stationhead]",
     "date": "2025-08-01",
