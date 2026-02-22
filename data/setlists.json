@@ -3,7 +3,7 @@
     "title": "[OKYUJI] BAND-MAID 10TH ANNIVERSARY TOUR 番外編 [SPIN-OFF] part 1",
     "venue": "KT Zepp Yokohama",
     "date": "2024-02-22",
-    "notes": "#1 of  [22:14]",
+    "notes": "#1 of 4 [22:14]",
     "setlist": [
       {
         "time": "00:12",
@@ -36,7 +36,7 @@
     "title": "[OKYUJI] BAND-MAID 10TH ANNIVERSARY TOUR 番外編 [SPIN-OFF] part 2",
     "venue": "KT Zepp Yokohama",
     "date": "2024-02-22",
-    "notes": "#2 of  [23:58]",
+    "notes": "#2 of 4 [23:58]",
     "setlist": [
       {
         "time": "00:00",
@@ -74,7 +74,7 @@
     "title": "[OKYUJI] BAND-MAID 10TH ANNIVERSARY TOUR 番外編 [SPIN-OFF] part 3",
     "venue": "KT Zepp Yokohama",
     "date": "2024-02-22",
-    "notes": "#3 of  [29:00]",
+    "notes": "#3 of 4 [29:00]",
     "setlist": [
       {
         "time": "00:00",
@@ -105,7 +105,41 @@
         "song": "Honkai"
       }
     ],
-  "previous": "124521"
+    "previous": "124521",
+    "next": "125454"
+  },
+  "125454": {
+    "title": "[OKYUJI] BAND-MAID 10TH ANNIVERSARY TOUR 番外編 [SPIN-OFF] part 4",
+    "venue": "KT Zepp Yokohama",
+    "date": "2024-02-22",
+    "notes": "#4 of 4 [22:19]",
+    "setlist": [
+      {
+        "time": "00:00",
+        "song": "secret My lips"
+      },
+      {
+        "time": "04:38",
+        "song": "Carry on living"
+      },
+      {
+        "time": "08:22",
+        "song": "Blooming"
+      },
+      {
+        "time": "12:10",
+        "song": "Screaming"
+      },
+      {
+        "time": "16:20",
+        "song": "endless Story"
+      },
+      {
+        "time": "20:10",
+        "song": "End of show"
+      }
+    ],
+  "previous": "125233"
   },
 "122607": {
     "title": "BAND-MAID PRE US OKYUJI in JAPAN SHIBUYA EGGMAN part 1",
