@@ -5,6 +5,7 @@
 // @description  Show Okyuji info with timestamps and next/previous part links from external JSON
 // @author       DriveTimeBM
 // @match        https://bandmaidprime.tokyo/movies/*
+// @match        https://player-api.p.uliza.jp/*
 // @connect      raw.githubusercontent.com
 // @connect      drivetimebm.github.io
 // ==/UserScript==
@@ -33,6 +34,17 @@
       console.error('Failed to load setlists:', err);
       return {};
     }
+  };
+
+  // Setup message listener for ULIZA iframe
+  const setupMessageListener = () => {
+      window.addEventListener('message', (event) => {
+        const video = document.querySelector('video');
+        if (video) {
+          video.currentTime = event.data.time;
+          video.play();
+        }
+      });
   };
 
   // =====================
@@ -244,9 +256,12 @@
         e.preventDefault();
         const seconds = Number(e.target.href.split('#t=')[1]);
         const video = document.querySelector('video');
+        const videoIframe = document.querySelector('iframe[src*="uliza.jp"]');
         if (video) {
           video.currentTime = seconds;
           video.play();
+        } else if (videoIframe) {
+          videoIframe.contentWindow.postMessage({ action: "seek", time: seconds }, "*");
         } else {
           window.location.hash = `t=${seconds}`;
         }
@@ -256,6 +271,11 @@
 
   // Main
   window.addEventListener('load', async () => {
+    if (window.location.origin == "https://player-api.p.uliza.jp") {
+      setupMessageListener();
+      return;
+    }
+
     const videoId = getVideoId();
     if (!videoId) return;
 
