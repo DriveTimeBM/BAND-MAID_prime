@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         BAND-MAID Prime Video Describer (with Timestamps & Navigation)
 // @namespace    https://bandmaidprime.tokyo/
-// @version      2.0
+// @version      2.1
 // @description  Show Okyuji info with timestamps and next/previous part links from external JSON
 // @author       DriveTimeBM
 // @match        https://bandmaidprime.tokyo/movies/*
+// @match        https://player-api.p.uliza.jp/*
 // @connect      raw.githubusercontent.com
 // @connect      drivetimebm.github.io
 // ==/UserScript==
@@ -23,16 +24,60 @@
     return match ? match[1] : null;
   };
 
+  let setlistCache = null;
+
   // Fetch JSON from GitHub (MV3-compatible)
   const loadSetlists = async () => {
+    if (setlistCache) return setlistCache;
+
     try {
       const res = await fetch(GITHUB_JSON_URL);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return await res.json();
+      setlistCache = await res.json();
+      return setlistCache;
     } catch (err) {
       console.error('Failed to load setlists:', err);
       return {};
     }
+  };
+
+  // =====================
+  // 🎬 IFRAME BRIDGE
+  // =====================
+
+  // Runs inside the Uliza iframe: listens for seek commands from parent
+  // and controls the actual <video> element.
+  const setupVideoControlMessageListener = () => {
+    window.addEventListener('message', (event) => {
+      if (!event.data || event.data.action !== 'seek') return;
+
+      // Video element may not be present yet; wait for it.
+      const tryApply = () => {
+        const video = document.querySelector('video');
+        if (video) {
+          video.currentTime = event.data.time;
+          video.play();
+          return true;
+        }
+        return false;
+      };
+
+      if (tryApply()) return;
+
+      const observer = new MutationObserver((mutations, obs) => {
+        if (tryApply()) obs.disconnect();
+      });
+      observer.observe(document.body, { childList: true, subtree: true });
+    });
+  };
+
+  // =====================
+  // 🕒 TIME HELPERS
+  // =====================
+
+  const getSecondsFromTimeString = (timeStr) => {
+    const [min, sec] = timeStr.split(':').map(Number);
+    return min * 60 + sec;
   };
 
   // =====================
@@ -87,7 +132,7 @@
     input.style.background = '#fffafc';
     input.style.color = '#333';
     input.style.backgroundColor = '#fff';
-    
+
     input.addEventListener('focus', () => {
       input.style.outline = 'none';
       input.style.boxShadow = '0 0 4px #f2a2c0';
@@ -158,21 +203,60 @@
         (entry.Category && entry.Category.toLowerCase().includes(query))
       );
 
-      if (!matches.length) {
+      // Search for song matches within setlists
+      const setlists = await loadSetlists();
+      const songMatches = [];
+      for (const [vid, setlistObj] of Object.entries(setlists)) {
+        if (Array.isArray(setlistObj.setlist)) {
+          for (const entry of setlistObj.setlist) {
+            if (entry.song && entry.song.toLowerCase().includes(query)) {
+              songMatches.push({
+                videoId: vid,
+                title: setlistObj.title,
+                song: entry.song,
+                time: entry.time || null
+              });
+            }
+          }
+        }
+      }
+
+      if (!matches.length && !songMatches.length) {
         resultsBox.innerHTML = `<div style="color:#888;">No matches found.</div>`;
         return;
       }
 
-      resultsBox.innerHTML = matches
-        .map(entry => {
-          const title = entry.Title || '(No Title)';
-          const cat = entry.Category ? `<span style="color:#999;">[${entry.Category}]</span> ` : '';
-          const url = entry.URL || entry.Link || '#';
-          return `<div style="margin-bottom:6px;"><a href="${url}" target="_blank" style="text-decoration:none; color:#d12d6d;">${cat}${title}</a></div>`;
-        })
-        .join('');
+      let html = '';
+      if (matches.length) {
+        html += matches
+          .map(entry => {
+            const title = entry.Title || '(No Title)';
+            const cat = entry.Category ? `<span style="color:#999;">[${entry.Category}]</span> ` : '';
+            const url = entry.URL || entry.Link || '#';
+            return `<div style="margin-bottom:6px;"><a href="${url}" target="_blank" style="text-decoration:none; color:#d12d6d;">${cat}${title}</a></div>`;
+          })
+          .join('');
+      }
+      if (songMatches.length) {
+        html += '<div style="margin:12px 0 4px 0;"><strong>In Setlists</strong></div>';
+        html += songMatches
+          .map(match => {
+            const primeEntry = data.find(d => d.URL && d.URL.includes(match.videoId));
+            const catText = primeEntry && primeEntry.Category ? `<span style="color:#999;">[${primeEntry.Category}]</span> ` : '';
+            const seconds = match.time ? getSecondsFromTimeString(match.time) : null;
+            const link = `https://bandmaidprime.tokyo/movies/${match.videoId}` + (seconds != null ? `#t=${seconds}` : '');
+            const timeLabel = match.time ? `<span style="color:#888;">[${match.time}]</span> ` : '';
+            return `<div style="margin-bottom:6px;"><a href="${link}" style="text-decoration:none; color:#2d6dd1;">${catText}${match.song} ${timeLabel}<span style="color:#999;">in</span> <span style="color:#d12d6d;">${match.title}</span></a></div>`;
+          })
+          .join('');
+      }
+      resultsBox.innerHTML = html;
     });
   }
+
+  // =====================
+  // 📋 OVERLAY
+  // =====================
 
   // Create the overlay
   const renderSummary = (data, setlists) => {
@@ -188,7 +272,7 @@
     container.style.backgroundColor = '#fffafc';
     container.style.fontFamily = 'monospace';
     container.style.lineHeight = '1.5';
-      
+
     let html = '<br><br><br><br>';
 
     if (data) {
@@ -203,8 +287,7 @@
         html += `<strong>Contents:</strong><br><ol style="margin-top:4px;">`;
         for (const entry of data.setlist) {
           if (entry.time) {
-            const [min, sec] = entry.time.split(':').map(Number);
-            const seconds = min * 60 + sec;
+            const seconds = getSecondsFromTimeString(entry.time);
             html += `<li><a href="#t=${seconds}" style="color:#d12d6d; text-decoration:none;">[${entry.time}]</a> ${entry.song}</li>`;
           } else {
             html += `<li>${entry.song}</li>`;
@@ -244,9 +327,12 @@
         e.preventDefault();
         const seconds = Number(e.target.href.split('#t=')[1]);
         const video = document.querySelector('video');
+        const videoIframe = document.querySelector('iframe[src*="uliza.jp"]');
         if (video) {
           video.currentTime = seconds;
           video.play();
+        } else if (videoIframe) {
+          videoIframe.contentWindow.postMessage({ action: 'seek', time: seconds }, '*');
         } else {
           window.location.hash = `t=${seconds}`;
         }
@@ -254,10 +340,39 @@
     });
   };
 
-  // Main
+  // =====================
+  // 🚀 MAIN
+  // =====================
+
   window.addEventListener('load', async () => {
+    // If running inside the Uliza iframe, set up the video controller and stop.
+    if (window.location.origin === 'https://player-api.p.uliza.jp') {
+      setupVideoControlMessageListener();
+      return;
+    }
+
     const videoId = getVideoId();
     if (!videoId) return;
+
+    // Handle #t=NNN arriving from "In Setlists" cross-page links
+    if (window.location.hash.startsWith('#t=')) {
+      const seconds = Number(window.location.hash.split('=')[1]);
+      // Wait briefly for iframe to exist, then send seek
+      const trySeek = (attempts = 0) => {
+        const videoIframe = document.querySelector('iframe[src*="uliza.jp"]');
+        if (videoIframe) {
+          // Give the iframe's script a moment to mount its listener
+          setTimeout(() => {
+            videoIframe.contentWindow.postMessage({ action: 'seek', time: seconds }, '*');
+          }, 1000);
+        } else if (attempts < 20) {
+          setTimeout(() => trySeek(attempts + 1), 250);
+        }
+      };
+      trySeek();
+      // Clean up the hash so refreshes don't re-seek
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
 
     try {
       const setlists = await loadSetlists();
