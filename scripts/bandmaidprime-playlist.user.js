@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BAND-MAID Prime Playlist Builder
 // @namespace    https://bandmaidprime.tokyo/
-// @version      1.2
+// @version      1.3
 // @description  Build named playlists of BAND-MAID Prime videos and play them back-to-back with auto-advance
 // @author       DriveTimeBM
 // @match        https://bandmaidprime.tokyo/
@@ -282,6 +282,9 @@
     const data = await loadPrimeData();
     if (!data.length) return;
 
+    // Sort by title ascending for natural grouping (part 1, part 2, etc.)
+    data.sort((a, b) => (a.Title || '').localeCompare(b.Title || '', undefined, { numeric: true, sensitivity: 'base' }));
+
     // Build category list
     const categories = Array.from(new Set(data.map(d => d.Category || '').filter(Boolean))).sort();
 
@@ -396,7 +399,10 @@
     document.body.appendChild(panel);
 
     // ---- Collapse behavior ----
-    let collapsed = false;
+    let collapsed = true;
+    body.style.display = 'none';
+    collapseBtn.textContent = '+';
+    panel.style.maxHeight = '';
     collapseBtn.addEventListener('click', () => {
       collapsed = !collapsed;
       body.style.display = collapsed ? 'none' : '';
