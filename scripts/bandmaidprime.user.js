@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         BAND-MAID Prime Video Describer (with Timestamps & Navigation)
 // @namespace    https://bandmaidprime.tokyo/
-// @version      2.1
+// @version      2.3
 // @description  Show Okyuji info with timestamps and next/previous part links from external JSON
 // @author       DriveTimeBM
 // @match        https://bandmaidprime.tokyo/movies/*
@@ -179,11 +179,9 @@
         top: `${topOffset}px`,
         width: `${width}px`,
         zIndex: 9999,
-        background: '#fffafc',
         border: '2px solid #f2a2c0',
         borderRadius: '12px',
         padding: '12px 16px',
-        boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
       });
     };
 
@@ -263,16 +261,6 @@
     const existing = document.querySelector('#bandmaid-summary-box');
     if (existing) existing.remove();
 
-    const container = document.createElement('div');
-    container.id = 'bandmaid-summary-box';
-    container.style.marginTop = '20px';
-    container.style.padding = '12px 16px';
-    container.style.border = '2px solid #f2a2c0';
-    container.style.borderRadius = '12px';
-    container.style.backgroundColor = '#fffafc';
-    container.style.fontFamily = 'monospace';
-    container.style.lineHeight = '1.5';
-
     let html = '<br><br><br><br>';
 
     if (data) {
@@ -314,12 +302,25 @@
     }
 
     const div = document.createElement('div');
+    div.id = 'bandmaid-summary-box';
     div.innerHTML = html;
+    Object.assign(div.style, {
+      padding: '12px 16px',
+      border: '2px solid #f2a2c0',
+      borderRadius: '12px',
+      fontFamily: 'monospace',
+      lineHeight: '1.5',
+      marginTop: '20px',
+      // Constrain width so it doesn't stretch across the page and cover the video controls.
+      width: 'fit-content',
+      maxWidth: 'min(480px, 30vw)',
+      boxSizing: 'border-box',
+    });
 
     const titleElement = document.querySelector('h1, .movie-title');
     if (titleElement) titleElement.insertAdjacentElement('afterend', div);
 
-    createSearchBox(container);
+    createSearchBox(div);
 
     // Timestamp jump
     div.addEventListener('click', e => {
