@@ -3,7 +3,7 @@
     "title": "BAND-MAID HALL TOUR 2024 FINAL (July 14, 2024) part 1",
     "venue": "Kanagawa Kenmin Hall",
     "date": "2024-07-14",
-    "notes": "#1 of ? [24:47]",
+    "notes": "#1 of 4 [24:47]",
     "setlist": [
       {
         "time": "00:00",
@@ -33,8 +33,43 @@
         "time": "20:39",
         "song": "DICE"
       }
-    ]
-  },  "128356": {
+    ],
+    "next": "129119"
+  }, 
+    "129119": {
+    "title": "BAND-MAID HALL TOUR 2024 FINAL (July 14, 2024) part 2",
+    "venue": "Kanagawa Kenmin Hall",
+    "date": "2024-07-14",
+    "notes": "#2 of 4 [24:47]",
+    "setlist": [
+      {
+        "time": "00:00",
+        "song": "the non-fiction days"
+      },
+      {
+        "time": "04:48",
+        "song": "Don't you tell ME"
+      },
+      {
+        "time": "09:10",
+        "song": "HATE?"
+      },
+      {
+        "time": "14:15",
+        "song": "After Life"
+      },
+      {
+        "time": "17:55",
+        "song": "from now on"
+      },
+      {
+        "time": "21:53",
+        "song": "Sense"
+      }
+    ],
+    "previous": "129118"
+  },   
+  "128356": {
     "title": "[OKYUJI] BAND-MAID ACOUSTIC OKYUJI (Mar. 20, 2024) part 1",
     "venue": "Line Cube Shibuya",
     "date": "2024-03-20",
